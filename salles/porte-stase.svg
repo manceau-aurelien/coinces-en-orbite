@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080"><rect width="1920" height="1080" fill="#070d1a"/>
+      <defs>
+        <linearGradient id="vd-mur" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#182536"/><stop offset="1" stop-color="#0b121e"/></linearGradient>
+        <linearGradient id="vd-sol" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#111b2a"/><stop offset="1" stop-color="#1c2a3c"/></linearGradient>
+        <radialGradient id="vd-glow-red" cx="0.52" cy="0.48" r="0.46">
+          <stop offset="0%" stop-color="#ef4444" stop-opacity="0.22"/>
+          <stop offset="65%" stop-color="#f97316" stop-opacity="0.07"/>
+          <stop offset="100%" stop-color="#0b121e" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="chevrons-warn" width="44" height="24" patternUnits="userSpaceOnUse">
+          <rect width="44" height="24" fill="#18121b"/>
+          <polygon points="0,24 14,0 28,0 14,24" fill="#f97316" opacity=".82"/>
+        </pattern>
+      </defs>
+      <rect width="1920" height="820" fill="url(#vd-mur)"/>
+      <rect y="820" width="1920" height="260" fill="url(#vd-sol)" stroke="#12161f" stroke-width="5"/>
+      <rect x="64" y="0" width="52" height="820" fill="#1e2d40" stroke="#12161f" stroke-width="5"/>
+      <rect x="1804" y="0" width="52" height="820" fill="#1e2d40" stroke="#12161f" stroke-width="5"/>
+      <rect x="0" y="0" width="1920" height="84" fill="#0d1624" stroke="#12161f" stroke-width="5"/>
+      <line x1="120" y1="820" x2="1800" y2="820" stroke="#ef4444" stroke-width="5" stroke-dasharray="28 18" opacity=".7"/>
+      <rect width="1920" height="1080" fill="url(#vd-glow-red)"/>
+
+      <g id="porte-blindee-verrouillee">
+        <rect x="468" y="96" width="764" height="74" rx="16" fill="#08101c" stroke="#ef4444" stroke-width="4.5"/>
+        <circle cx="510" cy="133" r="13" fill="#ef4444"/><circle cx="1190" cy="133" r="13" fill="#ef4444"/>
+        <text x="850" y="129" text-anchor="middle" font-family="Segoe UI, Arial" font-size="23.5" font-weight="900" fill="#fca5a5" letter-spacing="1.2">🔒 ACCÈS VERROUILLÉ · AILE DE STASE</text>
+        <text x="850" y="156" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" font-weight="800" fill="#fb923c" letter-spacing="0.8">STASE PROFONDE — ÉNERGIE INSUFFISANTE</text>
+
+        <rect x="518" y="184" width="664" height="638" rx="22" fill="#26374b" stroke="#12161f" stroke-width="7"/>
+        <rect x="546" y="210" width="608" height="612" rx="12" fill="#070d18" stroke="#12161f" stroke-width="5"/>
+        <rect x="552" y="216" width="296" height="600" fill="#1a2232" stroke="#12161f" stroke-width="5"/>
+        <rect x="852" y="216" width="296" height="600" fill="#171e2d" stroke="#12161f" stroke-width="5"/>
+        <rect x="576" y="242" width="248" height="546" rx="10" fill="#212a3d" stroke="#0d131e" stroke-width="3.5"/>
+        <rect x="876" y="242" width="248" height="546" rx="10" fill="#1e2739" stroke="#0d131e" stroke-width="3.5"/>
+
+        
+        <rect x="614" y="286" width="168" height="176" rx="12" fill="#030712" stroke="#475569" stroke-width="4"/>
+        <rect x="634" y="336" width="54" height="64" rx="5" fill="#070e1a" stroke="#1e293b" stroke-width="2"/>
+        <rect x="694" y="336" width="66" height="64" rx="5" fill="#070e1a" stroke="#1e293b" stroke-width="2"/>
+        <circle cx="698" cy="316" r="4" fill="#ef4444" opacity=".8"/>
+        <text x="698" y="428" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10.5" font-weight="800" fill="#475569">STASE · OFF</text>
+
+        <line x1="850" y1="224" x2="850" y2="808" stroke="#ef4444" stroke-width="6" opacity=".92"/>
+        <rect x="736" y="346" width="228" height="30" rx="10" fill="#0f172a" stroke="#ef4444" stroke-width="3.5"/>
+        <rect x="752" y="355" width="196" height="12" rx="6" fill="#ef4444" opacity=".82"/>
+        <rect x="736" y="622" width="228" height="30" rx="10" fill="#0f172a" stroke="#f97316" stroke-width="3.5"/>
+        <rect x="752" y="631" width="196" height="12" rx="6" fill="#f97316" opacity=".82"/>
+
+        <circle cx="850" cy="498" r="56" fill="#0b101d" stroke="#ef4444" stroke-width="5"/>
+        <circle cx="850" cy="498" r="44" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="10 8"/>
+        <rect x="828" y="492" width="44" height="34" rx="7" fill="#ef4444"/>
+        <path d="M836,492 L836,476 A14,14 0 0,1 864,476 L864,492" fill="none" stroke="#fca5a5" stroke-width="6"/>
+        <circle cx="850" cy="509" r="5" fill="#0b101d"/>
+        <rect x="546" y="796" width="608" height="24" fill="url(#chevrons-warn)" stroke="#12161f" stroke-width="3"/>
+      </g>
+
+      <g id="borne-verrou-energie">
+        <rect x="1226" y="232" width="386" height="456" rx="22" fill="#132032" stroke="#12161f" stroke-width="6"/>
+        <rect x="1246" y="252" width="346" height="358" rx="14" fill="#060d19" stroke="#ef4444" stroke-width="3.5"/>
+        <rect x="1266" y="272" width="306" height="42" rx="10" fill="#2c0f16" stroke="#ef4444" stroke-width="2"/>
+        <text x="1419" y="299" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="900" fill="#fca5a5">DÉVERROUILLAGE IMPOSSIBLE</text>
+
+        <text x="1272" y="352" font-family="Segoe UI, Arial" font-size="14.5" font-weight="800" fill="#94a3b8">ÉNERGIE ACTUELLE</text>
+        <text x="1566" y="352" text-anchor="end" font-family="Segoe UI, Arial" font-size="22" font-weight="900" fill="#f97316">3 %</text>
+
+        <text x="1272" y="388" font-family="Segoe UI, Arial" font-size="14" font-weight="800" fill="#94a3b8">STASE PROFONDE</text>
+        <text x="1566" y="388" text-anchor="end" font-family="Segoe UI, Arial" font-size="22" font-weight="900" fill="#38bdf8">45 % ⚡</text>
+
+        <rect x="1270" y="410" width="298" height="42" rx="10" fill="#0f172a" stroke="#334155" stroke-width="2.5"/>
+        <rect x="1278" y="418" width="30" height="26" rx="5" fill="#ef4444"/>
+        <rect x="1313" y="418" width="30" height="26" rx="5" fill="#f97316"/>
+        <rect x="1348" y="418" width="30" height="26" rx="5" fill="#1e293b"/><rect x="1383" y="418" width="30" height="26" rx="5" fill="#1e293b"/><rect x="1418" y="418" width="30" height="26" rx="5" fill="#1e293b"/><rect x="1453" y="418" width="30" height="26" rx="5" fill="#1e293b"/><rect x="1488" y="418" width="30" height="26" rx="5" fill="#1e293b"/><rect x="1523" y="418" width="37" height="26" rx="5" fill="#1e293b"/>
+        <line x1="1382" y1="404" x2="1382" y2="458" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="6 4"/>
+
+        <rect x="1270" y="476" width="298" height="110" rx="12" fill="#0b1526" stroke="#263a5e" stroke-width="2"/>
+        <text x="1419" y="508" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13.5" font-weight="800" fill="#e2e8f0">RÉVEILLE L'ÉQUIPAGE EN STASE</text>
+        <text x="1419" y="536" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15.5" font-weight="900" fill="#38bdf8">▶ VUES &amp; ABONNEMENTS TERRE</text>
+        <text x="1419" y="564" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="#94a3b8">Néo · Marcus · Clara · Kira · Victor · Maya</text>
+
+        <circle cx="1310" cy="648" r="12" fill="#ef4444"/><circle cx="1352" cy="648" r="12" fill="#f97316"/><circle cx="1394" cy="648" r="12" fill="#334155"/>
+        <rect x="1430" y="632" width="150" height="32" rx="8" fill="#1f2c3f" stroke="#475569" stroke-width="2.5"/>
+        <text x="1505" y="653" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12.5" font-weight="800" fill="#fca5a5">MODE ÉCO FORCÉ</text>
+      </g></svg>

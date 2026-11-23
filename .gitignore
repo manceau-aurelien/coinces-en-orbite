@@ -1,0 +1,9 @@
+# Seuls les fichiers du site partent en ligne.
+# Notes de travail, outils et SQL restent sur le PC (règle d'immersion).
+AGENTS.md
+CAHIER-DES-CHARGES.md
+outils/
+supabase/
+controles/
+__pycache__/
+.planche.html

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Coincés en orbite · le vaisseau</title>
+  <meta name="description" content="Connectez-vous au vaisseau en orbite : visitez les salles ouvertes, consultez le terminal, suivez l'équipage. Il nous reste 3 % d'énergie.">
+  <meta name="theme-color" content="#070d1a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Coincés en orbite">
+  <meta property="og:title" content="Coincés en orbite · le vaisseau">
+  <meta property="og:description" content="Connectez-vous au vaisseau en orbite : visitez les salles ouvertes, consultez le terminal, suivez l'équipage. Il nous reste 3 % d'énergie.">
+  <meta property="og:url" content="https://manceau-aurelien.github.io/coinces-en-orbite/">
+  <meta property="og:image" content="https://manceau-aurelien.github.io/coinces-en-orbite/img/vaisseau-exterieur.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/avatar-chaine.png">
+  <link rel="stylesheet" href="css/vaisseau.css?v=4">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="js/compte.js?v=4" defer></script>
+  <script src="js/app.js?v=4" defer></script>
+</head>
+<body>
+  <!-- Barre du haut : toujours visible -->
+  <header id="barre">
+    <button class="marque" data-aller="plan" title="Plan du vaisseau">
+      <img src="img/avatar-chaine.png" alt="">
+      <span>Coincés en orbite</span>
+    </button>
+    <div class="jauge-mini" title="Énergie du vaisseau">
+      <span class="eclair">⚡</span>
+      <span class="barre-fond"><span class="barre-plein" id="jauge-mini-plein"></span></span>
+      <b id="jauge-mini-txt">—</b>
+    </div>
+    <button id="btn-acces" class="btn-acces" title="Mon accès">
+      <span class="pastille" aria-hidden="true">📡</span><span id="acces-txt">Mon accès</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- 1. Arrivée : liaison avec la Terre -->
+    <section class="vue" id="vue-arrivee">
+      <div class="arrivee-fond"><img src="img/vaisseau-exterieur.jpg" alt="Le vaisseau en orbite au-dessus de la Terre"></div>
+      <div class="arrivee-carte">
+        <p class="signal"><span class="point-rouge"></span> Signal reçu · orbite terrestre</p>
+        <h1>Coincés en orbite</h1>
+        <p class="accroche">Un vaisseau tourne autour de votre planète. À bord, deux IA sont réveillées, sept dorment encore,
+          et il ne reste que <b id="arrivee-energie">3 %</b> d'énergie.</p>
+        <p>Le réseau du bord accepte les connexions depuis la Terre. Vous pouvez parcourir les salles ouvertes,
+          vous heurter aux portes fermées comme l'équipage, et consulter le terminal.</p>
+        <div class="actions">
+          <button class="btn principal" data-aller="plan">Se connecter au vaisseau</button>
+          <button class="btn" data-aller="salle:CA-1">Commencer par la baie de réveil</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Plan du vaisseau (déplaçable comme une carte) -->
+    <section class="vue" id="vue-plan" hidden>
+      <div class="plan-entete">
+        <h2>Plan du vaisseau</h2>
+        <p>Touchez une salle pour vous y rendre. Les salles en rouge attendent plus d'énergie.</p>
+      </div>
+      <div class="plan-cadre" id="plan-cadre">
+        <div class="plan-contenu" id="plan-contenu"></div>
+        <div class="plan-zoom">
+          <button data-zoom="1" title="Zoomer">+</button>
+          <button data-zoom="-1" title="Dézoomer">−</button>
+          <button data-zoom="0" title="Recentrer">⌖</button>
+        </div>
+      </div>
+      <ul class="plan-legende">
+        <li><span class="carre ouvert"></span> ouverte</li>
+        <li><span class="carre ici"></span> vous êtes ici</li>
+        <li><span class="carre ferme"></span> énergie insuffisante</li>
+      </ul>
+    </section>
+
+    <!-- 3. Une salle -->
+    <section class="vue" id="vue-salle" hidden>
+      <div class="salle-entete">
+        <button class="btn petit" data-aller="plan">◱ Plan</button>
+        <div class="salle-titre"><span id="salle-code"></span><h2 id="salle-nom"></h2></div>
+        <span class="cam"><span class="point-rouge"></span> <span id="salle-cam">CAM</span></span>
+      </div>
+      <div class="salle-vitre" id="salle-vitre">
+        <div class="salle-scene" id="salle-scene">
+          <img id="salle-img" alt="">
+          <svg id="salle-zones" viewBox="0 0 1920 1080" preserveAspectRatio="none"></svg>
+        </div>
+      </div>
+      <p class="salle-astuce">↔ Glissez l'image pour regarder autour de vous.</p>
+      <nav class="salle-objets" id="salle-objets" aria-label="Dans cette salle"></nav>
+    </section>
+  </main>
+
+  <!-- Panneau d'information (objet touché, porte fermée…) -->
+  <aside id="panneau" class="panneau" hidden>
+    <button class="fermer" data-fermer="panneau" aria-label="Fermer">×</button>
+    <p class="panneau-sur" id="panneau-sur"></p>
+    <h3 id="panneau-titre"></h3>
+    <div id="panneau-texte"></div>
+    <div class="actions" id="panneau-actions"></div>
+  </aside>
+
+  <!-- Terminal CA-3 -->
+  <div id="terminal" class="terminal" hidden>
+    <div class="terminal-ecran" role="dialog" aria-modal="true" aria-label="Terminal CA-3">
+      <div class="terminal-haut">
+        <span class="voyants"><i></i><i></i><i></i></span>
+        <span class="terminal-titre">TERMINAL CA-3<span class="large"> · LIAISON TERRE</span> <span class="casque">🎧 casque connecté</span></span>
+        <button class="btn petit" data-fermer="terminal">Retirer le casque</button>
+      </div>
+      <nav class="onglets" id="onglets">
+        <button data-onglet="vaisseau">Vaisseau</button>
+        <button data-onglet="equipage">Équipage</button>
+        <button data-onglet="journal">Journal de bord</button>
+        <button data-onglet="projets">Projets</button>
+        <button data-onglet="acces">Mon accès</button>
+      </nav>
+      <div class="terminal-corps" id="terminal-corps"></div>
+    </div>
+  </div>
+
+  <footer class="pied">
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="https://www.youtube.com/@coinces-en-orbite" target="_blank" rel="noopener">La chaîne</a>
+  </footer>
+</body>
+</html>

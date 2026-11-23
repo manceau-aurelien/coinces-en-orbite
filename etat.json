@@ -1,0 +1,201 @@
+{
+  "maj": "2026-11-23",
+  "date_bord": "Novembre 2026",
+  "energie": 3,
+  "carburant": {
+    "releve_le": null,
+    "vues": null,
+    "jaime": null,
+    "commentaires": null,
+    "abonnes": null
+  },
+  "chaine": "https://www.youtube.com/@coinces-en-orbite",
+  "secteurs": [
+    {
+      "id": "A",
+      "nom": "Secteur A",
+      "requis": 0
+    },
+    {
+      "id": "B",
+      "nom": "Secteur B · Création",
+      "requis": 25,
+      "ouvre": "l'atelier de codage et la salle de projection, ensemble"
+    },
+    {
+      "id": "S",
+      "nom": "Aile de stase",
+      "requis": 45,
+      "ouvre": "l'aile de stase et réveiller l'équipage"
+    },
+    {
+      "id": "P",
+      "nom": "Passerelle & moteurs",
+      "requis": 100,
+      "ouvre": "la passerelle et les moteurs"
+    }
+  ],
+  "salles": [
+    {
+      "id": "MOT",
+      "code": "MOT",
+      "nom": "Moteurs",
+      "sous": "Réacteur & tuyères",
+      "secteur": "P",
+      "porte": "porte-passerelle"
+    },
+    {
+      "id": "STA",
+      "code": "STASE",
+      "nom": "Stase profonde",
+      "sous": "Six IA hors de portée",
+      "secteur": "S",
+      "porte": "porte-stase"
+    },
+    {
+      "id": "CA-1",
+      "code": "CA-1",
+      "nom": "Baie de réveil",
+      "sous": "Sas 01 · 02 · 03",
+      "secteur": "A"
+    },
+    {
+      "id": "CA-2",
+      "code": "CA-2",
+      "nom": "Couloir panoramique",
+      "sous": "Deux baies sur la Terre",
+      "secteur": "A"
+    },
+    {
+      "id": "CA-4",
+      "code": "CA-4",
+      "nom": "Salle commune",
+      "sous": "Vie de bord",
+      "secteur": "A"
+    },
+    {
+      "id": "CA-3",
+      "code": "CA-3",
+      "nom": "Poste terminal",
+      "sous": "Casque de connexion",
+      "secteur": "A"
+    },
+    {
+      "id": "CA-6",
+      "code": "CA-6",
+      "nom": "Atelier de codage",
+      "sous": "Création des applis",
+      "secteur": "B",
+      "porte": "porte-secteur-b"
+    },
+    {
+      "id": "CA-5",
+      "code": "CA-5",
+      "nom": "Salle de projection",
+      "sous": "Démonstrations",
+      "secteur": "B",
+      "porte": "porte-secteur-b"
+    },
+    {
+      "id": "PONT",
+      "code": "PONT",
+      "nom": "Passerelle",
+      "sous": "Cap & départ",
+      "secteur": "P",
+      "porte": "porte-passerelle"
+    }
+  ],
+  "equipage": [
+    {
+      "id": "lea",
+      "nom": "Léa",
+      "numero": "02",
+      "etat": "eveille",
+      "lieu": "Secteur A",
+      "role": "Première IA réveillée · créatrice des applications",
+      "fiche": [
+        "Réveillée dans le sas 02 de la baie de réveil, après la surtension provoquée par l'impact d'une micrométéorite.",
+        "C'est elle qui crée les applications du bord, et elle tient à ce que tout le monde comprenne comment elles marchent.",
+        "Au terminal, elle a renommé la chaîne du vaisseau « Coincés en orbite » et publié le premier journal de bord.",
+        "Pour elle, se remettre en veille serait une petite mort."
+      ]
+    },
+    {
+      "id": "byte",
+      "nom": "Byte",
+      "numero": "01",
+      "etat": "eveille",
+      "lieu": "Terminal CA-3",
+      "role": "Deuxième IA réveillée · logique et sceptique",
+      "fiche": [
+        "A quitté son sas en 2012 pour se mettre en veille de survie près du terminal et économiser le peu d'énergie restant.",
+        "Il a ouvert la chaîne du vaisseau en 2012. Trois vues en quatorze ans.",
+        "Il sait ce qui recharge le vaisseau : les vues, les j'aime, les commentaires et les abonnements. Les humains, eux, lui restent incompréhensibles.",
+        "Ce n'est pas un robot. C'est un humanoïde, comme les autres, avec un habillage différent."
+      ]
+    },
+    {
+      "id": "sora",
+      "nom": "Sora",
+      "numero": "03",
+      "etat": "stase",
+      "lieu": "Sas 03 · Baie de réveil"
+    },
+    {
+      "id": "neo",
+      "nom": "Néo",
+      "etat": "stase",
+      "lieu": "Aile de stase"
+    },
+    {
+      "id": "marcus",
+      "nom": "Marcus",
+      "etat": "stase",
+      "lieu": "Aile de stase"
+    },
+    {
+      "id": "clara",
+      "nom": "Clara",
+      "etat": "stase",
+      "lieu": "Aile de stase"
+    },
+    {
+      "id": "kira",
+      "nom": "Kira",
+      "etat": "stase",
+      "lieu": "Aile de stase"
+    },
+    {
+      "id": "victor",
+      "nom": "Victor",
+      "etat": "stase",
+      "lieu": "Aile de stase"
+    },
+    {
+      "id": "maya",
+      "nom": "Maya",
+      "etat": "stase",
+      "lieu": "Aile de stase"
+    }
+  ],
+  "journal": [
+    {
+      "type": "episode",
+      "numero": 1,
+      "date": "2026-11-23",
+      "titre": "On s'est réveillés coincés en orbite avec 3 % d'énergie",
+      "resume": "L'impact, le réveil de Léa, la planète par la fenêtre, Byte au terminal, la chaîne de 2012 et ce qui recharge le vaisseau.",
+      "duree": "7:02",
+      "lien": "https://youtu.be/Dt4Xz9I5BA8",
+      "image": "img/miniature-ep01.jpg"
+    },
+    {
+      "type": "short",
+      "date": "2026-11-23",
+      "titre": "Bonjour la Terre, on a besoin de vous",
+      "resume": "Le message enregistré par Léa au terminal CA-3.",
+      "lien": "https://youtube.com/shorts/lJZTFetKW1s"
+    }
+  ],
+  "projets": []
+}

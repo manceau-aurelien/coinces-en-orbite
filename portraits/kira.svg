@@ -1,0 +1,258 @@
+
+<svg id="av-svg" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg">
+  <g id="av-corps">
+    <g id="av-cheveux-dos">
+      
+      <path d="M122,126 C92,162 84,234 90,322 C96,356 110,368 122,354 C118,300 120,234 134,172 Z"
+        fill="#18181b" stroke="#1a1a1a" stroke-width="5.5" stroke-linejoin="round"/>
+      <path d="M278,126 C308,162 316,234 310,322 C304,356 290,368 278,354 C282,300 280,234 266,172 Z"
+        fill="#18181b" stroke="#1a1a1a" stroke-width="5.5" stroke-linejoin="round"/>
+      <path d="M90,206 Q104,214 118,206 M88,244 Q104,252 118,244 M90,282 Q104,290 118,282" fill="none" stroke="#3f3f46" stroke-width="4" stroke-linecap="round"/>
+      <path d="M310,206 Q296,214 282,206 M312,244 Q296,252 282,244 M310,282 Q296,290 282,282" fill="none" stroke="#3f3f46" stroke-width="4" stroke-linecap="round"/>
+      <rect x="86" y="256" width="24" height="10" rx="4" fill="#fbbf24" stroke="#1a1a1a" stroke-width="2.5"/>
+      <rect x="290" y="256" width="24" height="10" rx="4" fill="#fbbf24" stroke="#1a1a1a" stroke-width="2.5"/>
+    </g>
+
+    
+    <path d="M70,530 C70,428 115,386 200,386 C285,386 330,428 330,530 Z" fill="#0f172a" stroke="#1a1a1a" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M88,454 L144,394 L162,408 L102,474 Z" fill="#10b981" stroke="#1a1a1a" stroke-width="3.5"/>
+    <path d="M312,454 L256,394 L238,408 L298,474 Z" fill="#10b981" stroke="#1a1a1a" stroke-width="3.5"/>
+    <line x1="200" y1="414" x2="200" y2="530" stroke="#10b981" stroke-width="5"/>
+    <path d="M172,330 L172,394 C186,412 214,412 228,394 L228,330 Z" fill="#9e623c" stroke="#1a1a1a" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M148,388 C162,424 238,424 252,388 L242,370 C220,386 180,386 158,370 Z" fill="#020617" stroke="#1a1a1a" stroke-width="5" stroke-linejoin="round"/>
+
+    <g id="av-bras-repos">
+      <path d="M96,472 C92,500 90,515 90,530" fill="none" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M304,472 C308,500 310,515 310,530" fill="none" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <g id="av-tete">
+      <ellipse cx="112" cy="228" rx="15" ry="22" fill="#c6865c" stroke="#1a1a1a" stroke-width="5"/>
+      <ellipse cx="288" cy="228" rx="15" ry="22" fill="#c6865c" stroke="#1a1a1a" stroke-width="5"/>
+      <path d="M114,198 C112,112 152,88 200,88 C248,88 288,112 286,198 C288,260 256,328 200,334 C144,328 112,260 114,198 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="6" stroke-linejoin="round"/>
+      <g id="av-joues">
+        <ellipse cx="147" cy="254" rx="15" ry="8" fill="#e06f6f" opacity=".32"/>
+        <ellipse cx="253" cy="254" rx="15" ry="8" fill="#e06f6f" opacity=".32"/>
+      </g>
+
+      
+      <path d="M108,196 C100,112 142,60 200,60 C258,60 300,112 292,196 C282,150 254,120 200,118 C146,120 118,150 108,196 Z"
+        fill="#18181b" stroke="#1a1a1a" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M126,110 C158,84 242,84 274,110" fill="none" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+
+      <g id="av-sourcils">
+        <path id="av-sourcil-g" d="M141,165 C154,156 172,156 184,164" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+        <path id="av-sourcil-d" d="M216,164 C228,156 246,156 259,165" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+      </g>
+
+      <g id="av-yeux">
+        <g id="av-oeil-g">
+          <ellipse cx="162" cy="200" rx="23" ry="26" fill="#fff" stroke="#1a1a1a" stroke-width="5"/>
+        </g>
+        <g id="av-oeil-d">
+          <ellipse cx="238" cy="200" rx="23" ry="26" fill="#fff" stroke="#1a1a1a" stroke-width="5"/>
+        </g>
+        <g id="av-pupilles">
+          <g id="av-pupille-g">
+            <circle cx="165" cy="202" r="10.5" fill="#059669"/>
+            <circle cx="165" cy="202" r="5" fill="#1a1a1a"/>
+            <circle cx="169" cy="197" r="3" fill="#fff"/>
+            <circle cx="161" cy="206" r="1.5" fill="#fff" opacity=".8"/>
+          </g>
+          <g id="av-pupille-d">
+            <circle cx="235" cy="202" r="10.5" fill="#059669"/>
+            <circle cx="235" cy="202" r="5" fill="#1a1a1a"/>
+            <circle cx="239" cy="197" r="3" fill="#fff"/>
+            <circle cx="231" cy="206" r="1.5" fill="#fff" opacity=".8"/>
+          </g>
+        </g>
+                <g id="av-paupieres">
+        <clipPath id="av-clip-oeil-g"><ellipse cx="162" cy="200" rx="21" ry="24"/></clipPath>
+        <g clip-path="url(#av-clip-oeil-g)">
+          <path id="av-paupiere-haut-g" d="M132,140 L192,140 L192,168 Q162,178 132,168 Z"
+            fill="#c6865c" stroke="#1a1a1a" stroke-width="5" stroke-linejoin="round"/>
+          <path id="av-paupiere-bas-g" d="M132,250 Q162,222 192,250 L192,264 L132,264 Z"
+            fill="#c6865c" stroke="#1a1a1a" stroke-width="4.5" stroke-linejoin="round"/>
+        </g>
+        <clipPath id="av-clip-oeil-d"><ellipse cx="238" cy="200" rx="21" ry="24"/></clipPath>
+        <g clip-path="url(#av-clip-oeil-d)">
+          <path id="av-paupiere-haut-d" d="M208,140 L268,140 L268,168 Q238,178 208,168 Z"
+            fill="#c6865c" stroke="#1a1a1a" stroke-width="5" stroke-linejoin="round"/>
+          <path id="av-paupiere-bas-d" d="M208,250 Q238,222 268,250 L268,264 L208,264 Z"
+            fill="#c6865c" stroke="#1a1a1a" stroke-width="4.5" stroke-linejoin="round"/>
+        </g>
+        </g>
+        <g id="av-cils-g"><path d="M139,192 C134,186 130,182 126,180" fill="none" stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round"/></g>
+        <path id="av-oeil-g-rire" opacity="0" d="M140,208 Q162,178 184,208" fill="none" stroke="#1a1a1a" stroke-width="6.5" stroke-linecap="round"/>
+        <path id="av-oeil-g-ferme" opacity="0" d="M140,198 Q162,216 184,198" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+        <g id="av-cils-d"><path d="M261,192 C266,186 270,182 274,180" fill="none" stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round"/></g>
+        <path id="av-oeil-d-rire" opacity="0" d="M216,208 Q238,178 260,208" fill="none" stroke="#1a1a1a" stroke-width="6.5" stroke-linecap="round"/>
+        <path id="av-oeil-d-ferme" opacity="0" d="M216,198 Q238,216 260,198" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+        <g id="av-oeil-d-clin" opacity="0">
+          <path d="M214,202 C226,186 250,186 262,202" fill="none" stroke="#1a1a1a" stroke-width="5.5" stroke-linecap="round"/>
+          <path d="M256,196 L266,190" fill="none" stroke="#1a1a1a" stroke-width="3.8" stroke-linecap="round"/>
+        </g>
+        <g id="av-paupieres-concentre" opacity="0">
+          <path d="M137,196 C140,170 184,170 187,196 Z" fill="#c6865c" stroke="#1a1a1a" stroke-width="4.5" stroke-linejoin="round"/>
+          <path d="M213,196 C216,170 260,170 263,196 Z" fill="#c6865c" stroke="#1a1a1a" stroke-width="4.5" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <path d="M200,218 C194,236 194,246 202,248 C207,249 211,246 212,243" fill="none" stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round"/>
+
+      <g id="av-bouche-fermee">
+        <path d="M174,280 C186,276 193,279 200,281 C207,279 214,276 226,280 C215,292 185,292 174,280 Z" fill="#9f3e52" stroke="#1a1a1a" stroke-width="3.8" stroke-linejoin="round"/>
+      </g>
+      <g id="av-bouche-sourire" opacity="0">
+        <path d="M168,274 C185,280 215,280 232,274 C224,300 176,300 168,274 Z" fill="#fff" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M168,274 C185,280 215,280 232,274" fill="none" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+      </g>
+      <g id="av-bouche-mi" opacity="0">
+        <path d="M172,276 C185,272 215,272 228,276 C222,300 178,300 172,276 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M179,278 L221,278 L219,283 L181,283 Z" fill="#fff"/>
+      </g>
+      <g id="av-bouche-ouverte" opacity="0">
+        <path d="M170,272 C185,267 215,267 230,272 C228,316 172,316 170,272 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M177,274 L223,274 L221,281 L179,281 Z" fill="#fff"/>
+        <path d="M185,301 C193,292 207,292 215,301 C207,307 193,307 185,301 Z" fill="#e0566f"/>
+      </g>
+      <g id="av-bouche-o" opacity="0">
+        <ellipse cx="200" cy="289" rx="13" ry="15" fill="#4a1414" stroke="#9f3e52" stroke-width="5"/>
+        <ellipse cx="200" cy="296" rx="7" ry="4" fill="#d9536a"/>
+      </g>
+      <g id="av-bouche-rire-fermee" opacity="0" transform="translate(200 272) scale(0.9 0.8) translate(-200 -272)"><path d="M160,270 C180,278 220,278 240,270 C236,322 164,322 160,270 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/><path d="M166,273 C184,280 216,280 234,273 L231,282 C214,288 186,288 169,282 Z" fill="#fff"/><path d="M180,306 C190,296 210,296 220,306 C210,314 190,314 180,306 Z" fill="#e0566f"/></g>
+      <g id="av-bouche-rire-mi" opacity="0" transform="translate(200 272) scale(0.95 0.9) translate(-200 -272)"><path d="M160,270 C180,278 220,278 240,270 C236,322 164,322 160,270 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/><path d="M166,273 C184,280 216,280 234,273 L231,282 C214,288 186,288 169,282 Z" fill="#fff"/><path d="M180,306 C190,296 210,296 220,306 C210,314 190,314 180,306 Z" fill="#e0566f"/></g>
+      <g id="av-bouche-rire-ouverte" opacity="0"><path d="M160,270 C180,278 220,278 240,270 C236,322 164,322 160,270 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/><path d="M166,273 C184,280 216,280 234,273 L231,282 C214,288 186,288 169,282 Z" fill="#fff"/><path d="M180,306 C190,296 210,296 220,306 C210,314 190,314 180,306 Z" fill="#e0566f"/></g>
+      <g id="av-bouche-triste-fermee" opacity="0"><path d="M176,294 C186,282 214,282 224,294" fill="none" stroke="#9f3e52" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="av-bouche-triste-mi" opacity="0"><path d="M174,296 C184,278 216,278 226,296 C214,300 186,300 174,296 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/></g>
+      <g id="av-bouche-triste-ouverte" opacity="0"><path d="M172,302 C182,268 218,268 228,302 C216,308 184,308 172,302 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M184,281 C194,276 206,276 216,281 L215,286 C205,282 195,282 185,286 Z" fill="#fff"/></g>
+      <g id="av-bouche-colere-fermee" opacity="0"><path d="M174,292 L184,285 L216,285 L226,292" fill="none" stroke="#9f3e52" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="av-bouche-colere-mi" opacity="0"><path d="M172,278 L228,278 C230,288 226,296 222,298 L178,298 C174,296 170,288 172,278 Z" fill="#fff" stroke="#1a1a1a" stroke-width="4.5" stroke-linejoin="round"/><path d="M173,288 L227,288" stroke="#1a1a1a" stroke-width="2.5"/><path d="M186,279 L186,297 M200,279 L200,297 M214,279 L214,297" stroke="#1a1a1a" stroke-width="2"/></g>
+      <g id="av-bouche-colere-ouverte" opacity="0"><path d="M166,274 L234,274 L224,308 C210,316 190,316 176,308 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/><path d="M172,276 L228,276 L226,284 L174,284 Z" fill="#fff"/><path d="M184,306 L216,306 L213,300 L187,300 Z" fill="#fff"/></g>
+      <g id="av-bouche-moue-fermee" opacity="0"><path d="M176,292 C188,288 198,293 206,289 C214,285 220,281 226,276" fill="none" stroke="#9f3e52" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="av-bouche-moue-mi" opacity="0"><path d="M176,291 C190,287 206,283 226,272 C224,290 206,299 190,297 C184,296 179,294 176,291 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M198,286 L223,275 L222,281 L199,291 Z" fill="#fff"/></g>
+      <g id="av-bouche-moue-ouverte" opacity="0"><path d="M174,293 C190,285 208,279 228,267 C228,295 208,308 190,304 C182,302 176,298 174,293 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M196,286 L225,271 L224,278 L197,292 Z" fill="#fff"/></g>
+      <g id="av-bouche-coin-fermee" opacity="0"><path d="M178,287 C194,294 214,290 228,276" fill="none" stroke="#9f3e52" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M227,275 C232,277 233,282 230,285" fill="none" stroke="#9f3e52" stroke-width="3" stroke-linecap="round"/></g>
+      <g id="av-bouche-coin-mi" opacity="0"><path d="M176,284 C194,292 214,288 230,272 C228,294 206,302 190,298 C182,296 178,290 176,284 Z" fill="#fff" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M176,284 C194,292 214,288 230,272" fill="none" stroke="#1a1a1a" stroke-width="3"/></g>
+      <g id="av-bouche-coin-ouverte" opacity="0"><path d="M174,282 C194,290 214,286 232,268 C232,300 206,310 188,304 C180,300 175,292 174,282 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M177,284 C195,291 214,287 230,271 L229,278 C214,293 194,297 178,290 Z" fill="#fff"/></g>
+      <g id="av-bouche-peur-fermee" opacity="0"><path d="M170,290 Q178,283 186,290 Q194,297 202,290 Q210,283 218,290 Q226,297 232,290" fill="none" stroke="#9f3e52" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="av-bouche-peur-mi" opacity="0"><path d="M166,284 C184,276 216,276 234,284 C226,302 174,302 166,284 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M172,284 C186,279 214,279 228,284 L226,289 C212,285 188,285 174,289 Z" fill="#fff"/></g>
+      <g id="av-bouche-peur-ouverte" opacity="0"><path d="M180,280 C180,264 220,264 220,280 L220,304 C220,322 180,322 180,304 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="5" stroke-linejoin="round"/><path d="M185,273 C194,269 206,269 215,273 L218,280 L182,280 Z" fill="#fff"/></g>
+      <g id="av-bouche-plate-fermee" opacity="0"><path d="M182,289 L218,289" fill="none" stroke="#9f3e52" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="av-bouche-plate-mi" opacity="0"><path d="M180,284 C192,282 208,282 220,284 C216,296 184,296 180,284 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/></g>
+      <g id="av-bouche-plate-ouverte" opacity="0"><path d="M178,281 C192,278 208,278 222,281 C220,304 180,304 178,281 Z" fill="#4a1414" stroke="#9f3e52" stroke-width="4.5" stroke-linejoin="round"/><path d="M182,282 C194,280 206,280 218,282 L217,287 L183,287 Z" fill="#fff"/></g>
+      <g id="av-bouche-gene-fermee" opacity="0" transform="translate(200 288) scale(0.92 0.85) translate(-200 -288)"><path d="M170,280 Q185,287 200,281 Q215,275 230,281 L227,295 Q213,300 200,295 Q187,290 173,295 Z" fill="#fff" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round"/><path d="M172,288 Q186,293 200,288 Q214,283 228,288" fill="none" stroke="#1a1a1a" stroke-width="2.5"/><path d="M186,282 L186,294 M200,281 L200,295 M214,279 L214,293" stroke="#1a1a1a" stroke-width="2"/></g>
+      <g id="av-bouche-gene-mi" opacity="0"><path d="M170,280 Q185,287 200,281 Q215,275 230,281 L227,295 Q213,300 200,295 Q187,290 173,295 Z" fill="#fff" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round"/><path d="M172,288 Q186,293 200,288 Q214,283 228,288" fill="none" stroke="#1a1a1a" stroke-width="2.5"/><path d="M186,282 L186,294 M200,281 L200,295 M214,279 L214,293" stroke="#1a1a1a" stroke-width="2"/></g>
+      <g id="av-bouche-gene-ouverte" opacity="0" transform="translate(200 288) scale(1.04 1.2) translate(-200 -288)"><path d="M170,280 Q185,287 200,281 Q215,275 230,281 L227,295 Q213,300 200,295 Q187,290 173,295 Z" fill="#fff" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round"/><path d="M172,288 Q186,293 200,288 Q214,283 228,288" fill="none" stroke="#1a1a1a" stroke-width="2.5"/><path d="M186,282 L186,294 M200,281 L200,295 M214,279 L214,293" stroke="#1a1a1a" stroke-width="2"/></g>
+      <g id="av-signe-rougeur" opacity="0">
+        <ellipse cx="148" cy="252" rx="22" ry="11" fill="#ff4d6d" opacity=".55"/>
+        <ellipse cx="252" cy="252" rx="22" ry="11" fill="#ff4d6d" opacity=".55"/>
+        <path d="M136,256 L142,246 M146,258 L152,248 M156,258 L162,248 M238,258 L244,248 M248,258 L254,248 M258,256 L264,246" stroke="#d61f45" stroke-width="2.6" stroke-linecap="round"/>
+      </g>
+      <g id="av-signe-larmes-yeux" opacity="0">
+        <path d="M145,219 Q162,231 179,219" fill="none" stroke="#8fd3ff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M221,219 Q238,231 255,219" fill="none" stroke="#8fd3ff" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g id="av-signe-larme" opacity="0">
+        <path d="M143,226 C140,236 140,244 141,250" fill="none" stroke="#8fd3ff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M141,244 C134,256 131,262 131,268 C131,275 136,279 141,279 C146,279 151,275 151,268 C151,262 148,256 141,244 Z" fill="#8fd3ff" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+        <ellipse cx="137" cy="266" rx="2.6" ry="4" fill="#fff"/>
+      </g>
+      <g id="av-signe-sueur" opacity="0">
+        <path d="M296,128 C289,142 284,151 284,158 C284,166 290,171 297,171 C304,171 310,166 310,158 C310,151 304,142 296,128 Z" fill="#8fd3ff" stroke="#1a1a1a" stroke-width="3.5" stroke-linejoin="round"/>
+        <ellipse cx="292" cy="156" rx="3" ry="5" fill="#fff"/>
+      </g>
+      <g id="av-signe-veine" opacity="0">
+        <g fill="none" stroke-linecap="round">
+          <path d="M243,112 Q245,123 234,125 M257,112 Q255,123 266,125 M243,142 Q245,131 234,129 M257,142 Q255,131 266,129" stroke="#fff" stroke-width="10"/>
+          <path d="M243,112 Q245,123 234,125 M257,112 Q255,123 266,125 M243,142 Q245,131 234,129 M257,142 Q255,131 266,129" stroke="#e11d48" stroke-width="5.5"/>
+        </g>
+      </g>
+      <g id="av-signe-peur" opacity="0" stroke-linecap="round">
+        <path d="M166,104 L166,140 M180,98 L180,146 M194,96 L194,148 M208,96 L208,148 M222,98 L222,146 M236,104 L236,140" stroke="#ffffff" stroke-width="8" opacity=".55"/>
+        <path d="M166,104 L166,140 M180,98 L180,146 M194,96 L194,148 M208,96 L208,148 M222,98 L222,146 M236,104 L236,140" stroke="#5b7cfa" stroke-width="4.5"/>
+      </g>
+      <g id="av-signe-etincelles" opacity="0">
+        <path d="M306,92 L311,108 L327,113 L311,118 L306,134 L301,118 L285,113 L301,108 Z" fill="#ffd84d" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M330,140 L333,148 L341,151 L333,154 L330,162 L327,154 L319,151 L327,148 Z" fill="#ffd84d" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <g id="av-signe-souffle" opacity="0" fill="none" stroke-linecap="round">
+        <path d="M238,300 C248,292 258,306 270,296 M242,312 C252,304 262,318 274,308" stroke="#1a1a1a" stroke-width="7"/>
+        <path d="M238,300 C248,292 258,306 270,296 M242,312 C252,304 262,318 274,308" stroke="#e8f4ff" stroke-width="4"/>
+      </g>
+      <g id="av-signe-plis-nez" opacity="0">
+        <path d="M184,210 L193,216 M216,210 L207,216 M186,222 L194,225 M214,222 L206,225" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+      </g>
+      <g id="av-signe-question" opacity="0">
+        <text x="302" y="132" font-family="Arial Black, Arial, sans-serif" font-size="58" font-weight="900" text-anchor="middle"
+          fill="#ffd84d" stroke="#1a1a1a" stroke-width="3.5" paint-order="stroke">?</text>
+      </g>
+
+    </g>
+
+    <g id="av-bras-explique" opacity="0">
+      <path d="M114,435 C90,418 76,392 80,358" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M114,435 C90,418 76,392 80,358" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="80" cy="364" r="16" fill="#10b981" stroke="#1a1a1a" stroke-width="3.5"/>
+      <path d="M62,350 C57,330 65,314 78,318 L80,302 C82,292 94,294 94,303 L96,297 C98,288 109,290 108,300 L109,305 C114,297 123,301 120,311 L116,340 C112,356 98,364 83,362 C72,361 64,358 62,350 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+      <path d="M84,344 C90,336 98,336 104,342" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+    </g>
+
+    <g id="av-bras-pointe" opacity="0">
+      <path d="M296,450 C328,420 344,370 339,320" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M296,450 C328,420 344,370 339,320" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="339" cy="326" r="16" fill="#10b981" stroke="#1a1a1a" stroke-width="3.5"/>
+      <path d="M318,318 C314,298 322,288 334,290 L336,238 C336,227 351,227 351,238 L351,293 C364,293 370,305 366,320 C362,337 349,343 336,341 C327,340 321,331 318,318 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+    </g>
+
+    <g id="av-bras-deux_mains" opacity="0">
+      <path d="M114,435 C90,418 76,392 80,358" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M114,435 C90,418 76,392 80,358" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="80" cy="364" r="16" fill="#10b981" stroke="#1a1a1a" stroke-width="3.5"/>
+      <path d="M62,350 C57,330 65,314 78,318 L80,302 C82,292 94,294 94,303 L96,297 C98,288 109,290 108,300 L109,305 C114,297 123,301 120,311 L116,340 C112,356 98,364 83,362 C72,361 64,358 62,350 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+      <path d="M84,344 C90,336 98,336 104,342" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+
+      <path d="M286,435 C310,418 324,392 320,358" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M286,435 C310,418 324,392 320,358" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="320" cy="364" r="16" fill="#10b981" stroke="#1a1a1a" stroke-width="3.5"/>
+      <path d="M338,350 C343,330 335,314 322,318 L320,302 C318,292 306,294 306,303 L304,297 C302,288 291,290 292,300 L291,305 C286,297 277,301 280,311 L284,340 C288,356 302,364 317,362 C328,361 336,358 338,350 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+      <path d="M296,342 C302,336 310,336 316,344" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+    </g>
+
+    <g id="av-bras-pouce" opacity="0">
+      <path d="M294,458 C328,430 342,392 338,354" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M294,458 C328,430 342,392 338,354" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <path d="M322,312 C320,282 325,256 340,256 C353,256 355,280 350,308 C366,310 374,322 372,338 C370,354 356,362 336,362 C320,362 314,352 316,336 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+      <rect x="307" y="309" width="27" height="14" rx="7" fill="#c6865c" stroke="#1a1a1a" stroke-width="4.2"/>
+      <rect x="306" y="323" width="28" height="14" rx="7" fill="#c6865c" stroke="#1a1a1a" stroke-width="4.2"/>
+      <rect x="308" y="337" width="26" height="14" rx="7" fill="#c6865c" stroke="#1a1a1a" stroke-width="4.2"/>
+      <rect x="313" y="350" width="22" height="12" rx="6" fill="#c6865c" stroke="#1a1a1a" stroke-width="4"/>
+    </g>
+
+    <g id="av-bras-reflechit" opacity="0">
+      <path d="M296,456 C306,412 282,374 252,350" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M296,456 C306,412 282,374 252,350" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <path d="M214,328 C214,314 226,310 238,314 L244,284 C247,274 260,277 257,288 L250,318 C262,320 268,332 262,344 C256,356 240,360 226,354 C218,350 214,340 214,328 Z"
+        fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+      <line x1="226" y1="330" x2="242" y2="332" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="228" y1="341" x2="242" y2="343" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+
+    <g id="av-bras-salut" opacity="0">
+      <path d="M294,452 C336,422 354,368 344,312" fill="none" stroke="#1a1a1a" stroke-width="38" stroke-linecap="round"/>
+      <path d="M294,452 C336,422 354,368 344,312" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+      <g id="av-main-salut">
+        <path d="M322,306 C318,286 326,274 337,278 L339,258 C341,248 351,250 350,260 L353,254 C355,245 365,248 363,258 L365,263 C370,256 379,261 376,270 L371,300 C366,316 352,322 339,320 C328,318 324,314 322,306 Z"
+          fill="#c6865c" stroke="#1a1a1a" stroke-width="4.8" stroke-linejoin="round"/>
+        <path d="M308,262 C302,272 302,284 307,294" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+        <path d="M385,258 C392,268 393,280 388,292" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+</svg>
