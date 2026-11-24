@@ -38,7 +38,7 @@ const Journaux = {
       return;
     }
     const energie = Compte.vaisseau ? Compte.vaisseau.energie : 0;
-    const liste = this.notes.filter((n) => auteurs.includes(n.auteur));
+    const liste = auteurs.flatMap((a) => this.notes.filter((n) => n.auteur === a)); // ordre de la vidéo : Léa, puis Byte
     el.innerHTML = liste.map((n) => {
       const m = ETAT.equipage.find((x) => x.id === n.auteur) || { nom: n.auteur };
       const tete = `<img src="portraits/${esc(n.auteur)}.svg" alt="">
