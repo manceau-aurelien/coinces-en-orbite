@@ -1,5 +1,5 @@
 {
-  "maj": "2026-11-24-3",
+  "maj": "2026-11-24-4",
   "date_bord": "Novembre 2026",
   "energie": 3,
   "journaux": true,
@@ -200,6 +200,16 @@
       "lien": "https://youtube.com/shorts/lJZTFetKW1s",
       "image": "img/miniature-short-bonjour.jpg",
       "vertical": true
+    },
+    {
+      "type": "episode",
+      "numero": 2,
+      "date": "2026-11-24",
+      "titre": "0 % des humains ont cliqué",
+      "resume": "Le rêve de Léa, les chiffres de la chaîne, une nuit entière au terminal, et une porte ouverte depuis la Terre.",
+      "duree": "10:19",
+      "lien": "https://youtu.be/O8ywZ6IdEHA",
+      "image": "img/miniature-ep02.jpg"
     }
   ],
   "projets": []
