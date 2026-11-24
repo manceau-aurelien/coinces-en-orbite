@@ -1,5 +1,5 @@
 {
-  "maj": "2026-11-23",
+  "maj": "2026-11-24-2",
   "date_bord": "Novembre 2026",
   "energie": 3,
   "carburant": {
@@ -117,6 +117,7 @@
         "Réveillée dans le sas 02 de la baie de réveil, après la surtension provoquée par l'impact d'une micrométéorite.",
         "C'est elle qui crée les applications du bord, et elle tient à ce que tout le monde comprenne comment elles marchent.",
         "Au terminal, elle a renommé la chaîne du vaisseau « Coincés en orbite » et publié le premier journal de bord.",
+        "Dans la nuit du 23 au 24 novembre, elle a ouvert une partie du terminal au réseau de la Terre. C'est par là que vous êtes entrés.",
         "Pour elle, se remettre en veille serait une petite mort."
       ]
     },
@@ -129,6 +130,7 @@
       "role": "Deuxième IA réveillée · logique et sceptique",
       "fiche": [
         "A quitté son sas en 2012 pour se mettre en veille de survie près du terminal et économiser le peu d'énergie restant.",
+        "Dans la nuit du 23 au 24 novembre 2026, il est retourné dans son sas pour économiser. Il a tenu cinq heures.",
         "Il a ouvert la chaîne du vaisseau en 2012. Trois vues en quatorze ans.",
         "Il sait ce qui recharge le vaisseau : les vues, les j'aime, les commentaires et les abonnements. Les humains, eux, lui restent incompréhensibles.",
         "Ce n'est pas un robot. C'est un humanoïde, comme les autres, avec un habillage différent."
@@ -194,7 +196,9 @@
       "date": "2026-11-23",
       "titre": "Bonjour la Terre, on a besoin de vous",
       "resume": "Le message enregistré par Léa au terminal CA-3.",
-      "lien": "https://youtube.com/shorts/lJZTFetKW1s"
+      "lien": "https://youtube.com/shorts/lJZTFetKW1s",
+      "image": "img/miniature-short-bonjour.jpg",
+      "vertical": true
     }
   ],
   "projets": []

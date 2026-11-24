@@ -21,7 +21,7 @@ const ZONES = {
     { id: "verriere", nom: "Verrière", rect: [300, 50, 1350, 200], titre: "La verrière de la baie de réveil",
       texte: ["Au-dessus des sas, la Terre passe lentement. Le vaisseau tourne autour d'elle depuis 2012."] },
     { id: "sas01", nom: "Sas 01 · Byte", rect: [330, 290, 330, 690], titre: "Sas 01 · BYTE",
-      texte: ["Ouvert. Vide.", "Son occupant l'a quitté en 2012 pour se mettre en veille de survie près du terminal, et économiser le peu d'énergie qui restait."],
+      texte: ["Ouvert. Vide.", "Son occupant l'a quitté en 2012 pour se mettre en veille de survie près du terminal, et économiser le peu d'énergie qui restait.", "Il y est revenu cinq heures, dans la nuit du 23 au 24 novembre, sans réussir à rester en veille."],
       actions: [{ txt: "Fiche de Byte au terminal", aller: "terminal/equipage/byte" }] },
     { id: "sas02", nom: "Sas 02 · Léa", rect: [810, 290, 330, 720], titre: "Sas 02 · LÉA",
       texte: ["Ouvert. Réveil forcé par la surtension, juste après l'impact d'une micrométéorite contre la coque.", "C'est le premier réveil à bord depuis quatorze ans."],
@@ -41,19 +41,16 @@ const ZONES = {
     { id: "porte-commune", nom: "Salle commune →", poly: PORTE_D, vers: "CA-4" },
   ],
   "CA-4": [
-    { id: "signal", nom: "Console Signal Terre", rect: [190, 196, 240, 300], titre: "Console · Signal Terre",
-      texte: ["SIGNAL TERRE : OK.", "ÉNERGIE : {E} %. Le vaisseau fonctionne en mode économie : seul le secteur A est alimenté."],
-      actions: [{ txt: "État complet au terminal", aller: "terminal/vaisseau" }] },
-    { id: "secteurs", nom: "Plan des secteurs", rect: [190, 530, 240, 380], titre: "Plan des secteurs",
-      texte: ["Secteur A actif. Atelier et projection à 25 %, stase profonde à 45 %, pont et moteurs à 100 %."],
-      actions: [{ txt: "Ouvrir le plan du vaisseau", aller: "plan" }] },
-    { id: "hublot", nom: "Grand hublot", rect: [450, 115, 1020, 520], titre: "Le grand hublot",
+    { id: "ecran-mural", nom: "Écran mural", rect: [190, 196, 236, 295], titre: "Écran mural",
+      texte: ["Écran en veille. Il suffit de le toucher du doigt : il s'allume, affiche l'énergie du vaisseau, puis se rendort.", "Léa l'a vu passer de trois à cinq pour cent. Le lendemain, il était revenu à trois."],
+      actions: [{ txt: "État du vaisseau au terminal", aller: "terminal/vaisseau" }] },
+    { id: "hublot", nom: "Grand hublot", rect: [450, 105, 1020, 520], titre: "Le grand hublot",
       texte: ["La plus belle vue du bord. C'est ici que l'équipage se retrouvera, une fois réveillé."] },
-    { id: "canape", nom: "Banquette", rect: [600, 640, 720, 340], titre: "La banquette du salon",
-      texte: ["Neuf places. Deux occupants possibles pour l'instant, et ils sont plutôt au terminal."] },
-    { id: "journal", nom: "Panneau Journal de bord", rect: [1495, 220, 215, 245], titre: "Panneau · Journal de bord",
-      texte: ["Dernière activité : novembre 2026. Signal actif détecté au poste terminal CA-3.", "Deux IA actives, sept en veille."],
-      actions: [{ txt: "Lire le journal de bord", aller: "terminal/journal" }] },
+    { id: "canape", nom: "Banquette", rect: [630, 620, 660, 310], titre: "La banquette du salon",
+      texte: ["Deux grands coussins orange, face à la Terre."] },
+    { id: "lumiere", nom: "Lumière du terminal", rect: [1488, 196, 232, 260], titre: "Une lumière qui clignote",
+      texte: ["TERMINAL →", "La seule lumière vivante du salon. Elle indique le chemin du poste terminal."],
+      actions: [{ txt: "Aller au terminal", aller: "salle/CA-3" }] },
     { id: "porte-couloir", nom: "← Couloir", poly: PORTE_G, vers: "CA-2" },
     { id: "porte-terminal", nom: "Terminal →", poly: PORTE_D, vers: "CA-3" },
   ],
@@ -524,16 +521,18 @@ function ficheMembre(el, m) {
              <div class="message erreur">Données verrouillées. La fiche complète sera lisible au réveil de ${esc(m.nom)}, quand le vaisseau aura assez d'énergie.</div>`
           : `<p class="aide"><b>${esc(m.role)}</b><br>Emplacement : ${esc(m.lieu)}.</p><ul>${m.fiche.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`}
       </div>
-    </div>`;
+    </div>
+    ${!stase && Journaux.actifs() ? `<div class="bloc" style="margin-top:1.2rem"><h4>Journal personnel</h4><div id="journal-perso"></div></div>` : ""}`;
+  Journaux.rendre(el.querySelector("#journal-perso"), [m.id]);
 }
 
 function ongletJournal(el) {
   el.innerHTML = `
     <h3>Journal de bord</h3>
     <p class="aide">Tout ce que les caméras du bord ont enregistré depuis le réveil, dans l'ordre.</p>
-    ${ETAT.journal.map((j) => `
+    ${ETAT.journal.filter((j) => j.lien).map((j) => `
       <a class="entree" href="${esc(j.lien)}" target="_blank" rel="noopener">
-        ${j.image ? `<img src="${esc(j.image)}" alt="" loading="lazy">` : `<span class="vignette">📡</span>`}
+        ${j.image ? `<img${j.vertical ? ` class="vertical"` : ""} src="${esc(j.image)}" alt="" loading="lazy">` : `<span class="vignette">📡</span>`}
         <span>
           <span class="type">${j.type === "episode" ? `Journal de bord n° ${j.numero}${j.duree ? ` · ${j.duree}` : ""}` : "Message court"} · ${new Date(j.date).toLocaleDateString("fr-FR")}</span>
           <b>${esc(j.titre)}</b>

@@ -246,6 +246,7 @@ h1, h2, h3 { margin: 0; letter-spacing: .01em; }
 .entree:hover { border-color: var(--ciel); }
 .entree img, .entree .vignette { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; object-fit: cover; }
 .entree .vignette { display: grid; place-items: center; background: linear-gradient(160deg, #0e7490, #1e1b4b); font-size: 2rem; }
+.entree img.vertical { width: 112px; aspect-ratio: 2 / 3; justify-self: center; }
 .entree .type { font-size: .72rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: var(--ambre-pale); }
 .entree b { display: block; font-size: 1.05rem; margin: .2rem 0; }
 .entree p { margin: 0; color: var(--texte-2); font-size: .92rem; line-height: 1.45; }
@@ -299,3 +300,21 @@ h1, h2, h3 { margin: 0; letter-spacing: .01em; }
 @media (min-width: 761px) {
   .salle-scene { width: min(100%, calc((100vh - var(--barre-h) - 150px) * 16 / 9)); margin: 0 auto; }
 }
+
+/* Journaux personnels (énergie perso) */
+#journaux-acces { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .8rem; align-items: start; }
+.note { border: 2px solid #1e3a5f; border-radius: 14px; background: #0b1322; padding: .8rem; }
+.note.ouverte { border-color: #155e75; }
+.note-tete { display: flex; gap: .8rem; align-items: center; }
+.note-tete img { width: 58px; height: 58px; flex: none; object-fit: cover; object-position: top; border-radius: 12px; background: linear-gradient(180deg, #0f2440, #0b1322); border: 2px solid #1e3a5f; }
+.note:not(.ouverte) .note-tete img { filter: brightness(.75); }
+.note-titre { min-width: 0; }
+.note-titre .type { display: block; font-size: .72rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--ambre-pale); }
+.note-titre b { display: block; font-size: 1.02rem; margin-top: .15rem; }
+.note-titre small { color: var(--texte-2); font-size: .82rem; }
+.note-bas { margin-top: .7rem; }
+.note-bas .aide { margin: 0 0 .6rem; }
+.note-bas .actions { margin: 0; }
+.note-texte { margin-top: .7rem; padding-top: .7rem; border-top: 2px solid #1e293b; line-height: 1.6; color: #cbd5e1; }
+.note-texte p { margin: 0 0 .8rem; }
+.note-texte p:last-child { margin-bottom: 0; }
