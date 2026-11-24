@@ -1,7 +1,8 @@
 {
-  "maj": "2026-11-24-2",
+  "maj": "2026-11-24-3",
   "date_bord": "Novembre 2026",
   "energie": 3,
+  "journaux": true,
   "carburant": {
     "releve_le": null,
     "vues": null,
