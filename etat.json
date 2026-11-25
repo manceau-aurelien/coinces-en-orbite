@@ -1,7 +1,7 @@
 {
-  "maj": "2026-11-24-4",
+  "maj": "2026-11-25-1",
   "date_bord": "Novembre 2026",
-  "energie": 3,
+  "energie": 2.5,
   "journaux": true,
   "carburant": {
     "releve_le": null,
@@ -210,6 +210,15 @@
       "duree": "10:19",
       "lien": "https://youtu.be/O8ywZ6IdEHA",
       "image": "img/miniature-ep02.jpg"
+    },
+    {
+      "type": "short",
+      "date": "2026-11-25",
+      "titre": "En roue libre !",
+      "resume": "Deux virgule cinq pour cent, un couloir vide, et Byte seul avec son record.",
+      "lien": "https://youtube.com/shorts/lppyWnxBIDA",
+      "image": "img/miniature-short-roue-libre.jpg",
+      "vertical": true
     }
   ],
   "projets": []

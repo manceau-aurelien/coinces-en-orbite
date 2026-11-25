@@ -5,6 +5,7 @@
    - Navigation par l'adresse : #plan · #salle/CA-1 · #porte/STA · #terminal/equipage/lea
    ===================================================================== */
 
+const pc = (x) => Number(x).toLocaleString("fr-FR");
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const nombre = (n) => (n == null ? "—" : Number(n).toLocaleString("fr-FR"));
@@ -81,8 +82,8 @@ async function demarrer() {
   }
   const e = ETAT.energie;
   $("#jauge-mini-plein").style.width = `${Math.max(2, e)}%`;
-  $("#jauge-mini-txt").textContent = `${e} %`;
-  $("#arrivee-energie").textContent = `${e} %`;
+  $("#jauge-mini-txt").textContent = `${pc(e)} %`;
+  $("#arrivee-energie").textContent = `${pc(e)} %`;
 
   document.addEventListener("click", (ev) => {
     const a = ev.target.closest("[data-aller]");
@@ -405,7 +406,7 @@ function agir(z) {
   ouvrirPanneau({
     sur: $("#salle-code").textContent,
     titre: z.titre || z.nom,
-    texte: (z.texte || []).map((t) => t.replace("{E}", ETAT.energie)),
+    texte: (z.texte || []).map((t) => t.replace("{E}", pc(ETAT.energie))),
     actions: z.actions || [],
   });
 }
@@ -433,8 +434,8 @@ function ouvrirPanneauPorte(s, depuisSalle = false) {
     sur: `Accès verrouillé · ${sec.requis} % requis`,
     titre: `${s.code} · ${s.nom}`,
     texte: [
-      `Énergie insuffisante : le vaisseau est à ${ETAT.energie} %, il en faut ${sec.requis} % pour ouvrir ${sec.ouvre || sec.nom}.`,
-      `Il manque ${manque} %. L'équipage se heurte à la même porte.`,
+      `Énergie insuffisante : le vaisseau est à ${pc(ETAT.energie)} %, il en faut ${sec.requis} % pour ouvrir ${sec.ouvre || sec.nom}.`,
+      `Il manque ${pc(manque)} %. L'équipage se heurte à la même porte.`,
     ],
     actions,
   });
@@ -466,8 +467,8 @@ function ongletVaisseau(el) {
     <p class="aide">Date de bord : ${esc(ETAT.date_bord)}. Mode économie : seul le secteur A est alimenté.</p>
     <div class="bloc">
       <h4>Énergie commune</h4>
-      <div class="jauge" role="img" aria-label="Énergie : ${e} %">
-        <span class="valeur" style="left:${e}%">${e} %</span>
+      <div class="jauge" role="img" aria-label="Énergie : ${pc(e)} %">
+        <span class="valeur" style="left:${e}%">${pc(e)} %</span>
         <span class="plein" style="width:calc(${Math.max(e, 1)}% - 4px)"></span>
         ${paliers.map((p, i) => `<span class="palier${i === paliers.length - 1 ? " dernier" : ""}" style="left:${p.requis}%"><span>${p.requis} %<br><b>${esc(p.nom)}</b></span></span>`).join("")}
       </div>
