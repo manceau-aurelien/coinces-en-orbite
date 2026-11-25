@@ -149,9 +149,6 @@ h1, h2, h3 { margin: 0; letter-spacing: .01em; }
 .zone:hover rect, .zone:focus rect, .zone:hover polygon, .zone:focus polygon { fill: rgba(34, 211, 238, .12); stroke: rgba(103, 232, 249, .9); }
 .zone.ferme:hover rect, .zone.ferme:focus rect, .zone.ferme:hover polygon, .zone.ferme:focus polygon { fill: rgba(239, 68, 68, .14); stroke: rgba(252, 165, 165, .9); }
 .zone:focus { outline: none; }
-.zone .repere { fill: var(--cyan); stroke: #082f49; stroke-width: 4; opacity: .85; animation: repere 2.4s ease-in-out infinite; }
-.zone.ferme .repere { fill: var(--rouge); }
-@keyframes repere { 50% { opacity: .35; } }
 .salle-objets { display: flex; flex-wrap: wrap; gap: .5rem; max-width: 1400px; margin: .8rem auto 0; padding: 0 1rem; }
 .salle-objets button {
   padding: .5em .85em; border-radius: 999px; border: 2px solid var(--arceau); background: var(--coque-2);
@@ -354,3 +351,10 @@ button.livre:hover svg, button.livre:focus-visible svg { transform: translateY(-
 .page-texte p { margin: 0 0 .9rem; }
 .page-texte p:last-child { margin-bottom: 0; }
 @media (max-width: 560px) { #journal-livre { justify-items: start; text-align: left; } .notes-livre, .livre-bas .actions { justify-content: flex-start; } }
+
+/* Objet caché dans une salle (la vis) : dessiné, cliquable, sans cadre */
+.zone .decor { pointer-events: none; }
+.zone .decor rect { stroke: #0d131d; stroke-width: 2.5; fill: #b6c4d6; transition: none; }
+.zone.discret:hover > rect, .zone.discret:focus > rect { fill: none; stroke: none; }
+.zone.discret:focus-visible > rect { stroke: rgba(103, 232, 249, .9); }
+.zone.discret > rect { pointer-events: all; }

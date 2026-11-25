@@ -30,6 +30,9 @@ const ZONES = {
     { id: "sas03", nom: "Sas 03 · Sora", rect: [1290, 290, 330, 690], titre: "Sas 03 · SORA",
       texte: ["Fermé. Stase en cours.", "L'énergie du vaisseau est trop basse pour un nouveau réveil."],
       actions: [{ txt: "Fiche de Sora au terminal", aller: "terminal/equipage/sora" }] },
+    { id: "vis", nom: "Une vis", rect: [1622, 940, 84, 92], discret: true, titre: "Une vis", // cachée par Byte (note byte-2) : pas de bouton dans la liste
+      decor: `<g transform="translate(1664 988) rotate(-24)"><ellipse cx="4" cy="13" rx="31" ry="5" fill="#05090f" opacity=".6"/><path d="M-14-6H24l8 6-8 6H-14z" fill="#8b9bb0" stroke="#0d131d" stroke-width="2.5" stroke-linejoin="round"/><path d="M-6-7l4 14M2-7l4 14M10-7l4 14M18-7l4 14" stroke="#3f4f63" stroke-width="2.5"/><path d="M-12-3H24" stroke="#dbe6f2" stroke-width="2" opacity=".8"/><rect x="-25" y="-13" width="12" height="26" rx="4" fill="#b6c4d6" stroke="#0d131d" stroke-width="2.5"/><path d="M-25 0h6" stroke="#3f4f63" stroke-width="4"/></g>`,
+      texte: ["Une vis qui n'a rien à faire là."] },
     { id: "porte-stase", nom: "Porte · Stase profonde", poly: PORTE_G, vers: "STA" },
     { id: "porte-couloir", nom: "Couloir →", poly: PORTE_D, vers: "CA-2" },
   ],
@@ -366,9 +369,8 @@ function remplirScene({ code, nom, cam, image, alt, zones }) {
     const forme = z.poly
       ? `<polygon points="${z.poly.map((p) => p.join(",")).join(" ")}"/>`
       : `<rect x="${z.rect[0]}" y="${z.rect[1]}" width="${z.rect[2]}" height="${z.rect[3]}" rx="18"/>`;
-    const [cx, cy] = centreZone(z);
-    return `<g class="zone${ferme ? " ferme" : ""}" data-z="${i}" tabindex="0" role="button" aria-label="${esc(z.nom)}">
-      ${forme}<circle class="repere" cx="${cx}" cy="${cy}" r="13"/><title>${esc(z.nom)}</title></g>`;
+    return `<g class="zone${ferme ? " ferme" : ""}${z.discret ? " discret" : ""}" data-z="${i}" tabindex="0" role="button" aria-label="${esc(z.nom)}">
+      ${z.decor ? `<g class="decor">${z.decor}</g>` : ""}${forme}${z.discret ? "" : `<title>${esc(z.nom)}</title>`}</g>`;
   }).join("");
   svg.onclick = (ev) => { const g = ev.target.closest("[data-z]"); if (g) agir(zonesCourantes[+g.dataset.z]); };
   svg.onkeydown = (ev) => {
@@ -376,18 +378,12 @@ function remplirScene({ code, nom, cam, image, alt, zones }) {
     if (g && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); agir(zonesCourantes[+g.dataset.z]); }
   };
   $("#salle-objets").innerHTML = zones.map((z, i) => {
+    if (z.discret) return "";
     const ferme = z.ferme || (z.vers && !ouverte(salle(z.vers)));
     const cls = [z.vers ? "porte" : "", ferme ? "ferme" : ""].join(" ").trim();
     return `<button class="${cls}" data-zb="${i}">${ferme && z.vers ? "🔒 " : ""}${esc(z.nom)}</button>`;
   }).join("");
   $("#salle-objets").onclick = (ev) => { const b = ev.target.closest("[data-zb]"); if (b) agir(zonesCourantes[+b.dataset.zb]); };
-}
-function centreZone(z) {
-  if (z.poly) {
-    const xs = z.poly.map((p) => p[0]), ys = z.poly.map((p) => p[1]);
-    return [(Math.min(...xs) + Math.max(...xs)) / 2, Math.min(...ys) + 130];
-  }
-  return [z.rect[0] + z.rect[2] / 2, z.rect[1] + Math.min(46, z.rect[3] / 2)];
 }
 function centrerScene() {
   const v = $("#salle-vitre");
