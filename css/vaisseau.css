@@ -318,3 +318,39 @@ h1, h2, h3 { margin: 0; letter-spacing: .01em; }
 .note-texte { margin-top: .7rem; padding-top: .7rem; border-top: 2px solid #1e293b; line-height: 1.6; color: #cbd5e1; }
 .note-texte p { margin: 0 0 .8rem; }
 .note-texte p:last-child { margin-bottom: 0; }
+
+/* Journaux personnels : le livre et ses notes sous le portrait, la fenêtre de lecture */
+#journal-livre { display: grid; justify-items: center; gap: .3rem; margin-top: .9rem; text-align: center; }
+.livre { display: block; width: 100%; max-width: 200px; padding: .3rem; border: 0; background: none; border-radius: 14px; }
+.livre svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 14px #000a); transition: transform .25s; }
+button.livre { cursor: pointer; }
+button.livre:hover svg, button.livre:focus-visible svg { transform: translateY(-4px) rotate(-1.5deg); }
+.livre-nom { font-size: 1.05rem; }
+.livre-etat { color: var(--texte-2); }
+.livre-bas { width: 100%; }
+.livre-bas .actions { margin: 0; justify-content: center; }
+.terminal-corps .livre-bas .aide { margin: .3rem 0 .5rem; font-size: .9rem; }
+.notes-livre { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; width: 100%; margin-top: .5rem; }
+.feuille { position: relative; width: 104px; display: grid; gap: .15rem; align-content: center; min-height: 92px; padding: 1rem .5rem .6rem; border: 0; border-radius: 3px; color: #3d3220; font: 700 .84rem/1.25 Georgia, "Times New Roman", serif; text-align: center; cursor: pointer;
+  background: #f6ecd2; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); transition: transform .2s; }
+.feuille::after { content: ""; position: absolute; right: 0; top: 0; border: 8px solid; border-color: transparent transparent #cdb98a #cdb98a; }
+.feuille:hover, .feuille:focus-visible { transform: translateY(-3px) rotate(-1deg); }
+.feuille:focus-visible { outline: 3px solid var(--cyan); outline-offset: -3px; }
+.feuille.fermee { color: #cbd5e1; background: #1b2b40; }
+.feuille.fermee::after { border-color: transparent transparent #3b506b #3b506b; }
+.feuille.fermee b { color: var(--ambre-pale); font: 800 .84rem/1.3 system-ui, sans-serif; }
+#lecture { width: min(680px, calc(100vw - 1.6rem)); max-width: none; max-height: min(86vh, 900px); padding: 0; border: 0; border-radius: 6px 16px 16px 6px; background: #f6ecd2; color: #2c2619; border-left: 8px solid #8b6f47; box-shadow: 0 24px 70px #000c; overflow: auto; }
+#lecture.fermee { background: #0f1b2c; color: var(--texte); border-left-color: #334155; }
+#lecture::backdrop { background: rgba(3, 7, 15, .72); backdrop-filter: blur(3px); }
+.lecture-page { position: relative; padding: 1.3rem 1.5rem 1.5rem; }
+.lecture-page h3 { margin: .3rem 2rem .9rem 0; font-size: 1.35rem; }
+.lecture-page .actions { margin: 0; }
+.lecture-x { position: absolute; right: .8rem; top: .8rem; width: 36px; height: 36px; border: 0; border-radius: 10px; background: #0000001a; color: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.lecture-x:hover, .lecture-x:focus-visible { background: #00000033; }
+#lecture.fermee .lecture-x { background: #ffffff1a; }
+.page-date { display: block; padding-right: 2.6rem; font-size: .86rem; font-weight: 700; color: #7a5a2b; }
+#lecture.fermee .page-date { color: var(--ambre-pale); }
+.page-texte { font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; line-height: 1.65; }
+.page-texte p { margin: 0 0 .9rem; }
+.page-texte p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) { #journal-livre { justify-items: start; text-align: left; } .notes-livre, .livre-bas .actions { justify-content: flex-start; } }

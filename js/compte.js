@@ -78,8 +78,7 @@ const Compte = {
     const corps = document.getElementById("terminal-corps");
     const onglet = document.querySelector('#onglets [aria-selected="true"]');
     if (corps && onglet && onglet.dataset.onglet === "acces" && !document.getElementById("terminal").hidden) this.rendre(corps);
-    const perso = document.querySelector("#journal-perso[data-journaux]");
-    if (perso) Journaux.rendre(perso, perso.dataset.journaux.split(","));
+    if (corps && corps.dataset.journal && document.getElementById("journal-livre")) Journaux.rendre(corps, corps.dataset.journal);
   },
 
   /* ---------- Affichage ---------- */
@@ -132,9 +131,7 @@ const Compte = {
         <h4>Énergie perso</h4>
         <p class="aide" style="margin:0">Connecté, vous déposez un rapport de quart par jour : +1 ⚡ à chaque fois. Cette énergie est la vôtre.
           Elle n'ouvre pas les salles du vaisseau (seule l'énergie commune le peut), mais elle ${Journaux.actifs() ? "ouvre les journaux personnels de l'équipage" : "débloquera des bonus"}.</p>
-      </div>
-      ${Journaux.actifs() ? `<div class="bloc"><h4>Journaux personnels</h4><div id="journaux-acces"></div></div>` : ""}`;
-    Journaux.rendre(el.querySelector("#journaux-acces"), ["lea", "byte"]);
+      </div>`;
     el.querySelector(".choix").onclick = (e) => {
       const b = e.target.closest("[data-mode]");
       if (b) { this.mode = b.dataset.mode; this.message = null; this.rendre(el); }
@@ -155,9 +152,7 @@ const Compte = {
       <p class="aide">Connecté en tant que <b>${esc(this.pseudo)}</b>${this.user.email ? ` (${esc(this.user.email)})` : ""}.</p>
       ${msg}
       <div class="bloc"><h4>Énergie perso</h4>${energie}</div>
-      ${Journaux.actifs() ? `<div class="bloc"><h4>Journaux personnels</h4>
-        <p class="aide" style="margin-top:0">Une seule note par journal pour l'instant, et 1 ⚡ pour l'ouvrir. Une note ouverte le reste.</p>
-        <div id="journaux-acces"></div></div>` : `<div class="bloc"><h4>Bonus</h4>
+      ${Journaux.actifs() ? `<div id="journaux-acces"></div>` : `<div class="bloc"><h4>Bonus</h4>
         <div class="bonus"><span class="cadenas">🔒</span><span><b>Archives du bord</b><br>Bientôt disponibles avec votre énergie perso.</span></div>
       </div>`}
       <div class="bloc"><h4>Applis du bord</h4>
@@ -170,7 +165,7 @@ const Compte = {
       ${this.confirmerSuppression ? `<div class="message erreur" style="margin-top:1rem">Supprimer définitivement cet accès ? Votre énergie perso et votre progression
         dans toutes les applis reliées à cet accès seront effacées. Impossible de revenir en arrière.
         <div class="actions"><button class="btn alerte" id="b-confirmer">Oui, supprimer définitivement</button><button class="btn" id="b-annuler">Annuler</button></div></div>` : ""}`;
-    Journaux.rendre(el.querySelector("#journaux-acces"), ["lea", "byte"]);
+    Journaux.acces(el.querySelector("#journaux-acces"));
     el.querySelector("#b-sortir").onclick = () => this.sortir();
     el.querySelector("#b-supprimer").onclick = () => { this.confirmerSuppression = true; this.rendre(el); };
     const c = el.querySelector("#b-confirmer");

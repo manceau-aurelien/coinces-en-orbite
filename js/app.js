@@ -513,7 +513,10 @@ function ficheMembre(el, m) {
   el.innerHTML = `
     <button class="btn petit" data-aller="terminal/equipage">← Équipage</button>
     <div class="fiche" style="margin-top:1rem">
-      <img src="portraits/${m.id}.svg" alt="${esc(m.nom)}" ${stase ? 'style="filter:grayscale(1) brightness(.45) blur(2px)"' : ""}>
+      <div class="fiche-gauche">
+        <img src="portraits/${m.id}.svg" alt="${esc(m.nom)}" ${stase ? 'style="filter:grayscale(1) brightness(.45) blur(2px)"' : ""}>
+        ${!stase ? `<div id="journal-livre"></div>` : ""}
+      </div>
       <div>
         <p class="panneau-sur" style="color:${stase ? "var(--rouge-pale)" : "var(--cyan)"} !important">${stase ? "EN STASE" : "ÉVEILLÉ"}${m.numero ? ` · IA n° ${m.numero}` : ""}</p>
         <h3 style="font-size:1.8rem">${esc(m.nom)}</h3>
@@ -522,9 +525,9 @@ function ficheMembre(el, m) {
              <div class="message erreur">Données verrouillées. La fiche complète sera lisible au réveil de ${esc(m.nom)}, quand le vaisseau aura assez d'énergie.</div>`
           : `<p class="aide"><b>${esc(m.role)}</b><br>Emplacement : ${esc(m.lieu)}.</p><ul>${m.fiche.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`}
       </div>
-    </div>
-    ${!stase && Journaux.actifs() ? `<div class="bloc" style="margin-top:1.2rem"><h4>Journal personnel</h4><div id="journal-perso"></div></div>` : ""}`;
-  Journaux.rendre(el.querySelector("#journal-perso"), [m.id]);
+    </div>`;
+  el.dataset.journal = stase ? "" : m.id;
+  if (!stase) Journaux.rendre(el, m.id);
 }
 
 function ongletJournal(el) {
