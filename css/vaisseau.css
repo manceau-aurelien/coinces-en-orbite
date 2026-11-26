@@ -381,3 +381,31 @@ button.site-ecran:hover svg, button.site-ecran:focus-visible svg { transform: tr
   background: #0c1420e6; border: 1px solid #f43f5e80; color: #e2e8f0; font-size: .85rem; opacity: 0; pointer-events: none; }
 #inventaire-note.vu { animation: noteInventaire 4.6s ease forwards; }   /* au moins 3,5 s bien lisible */
 @keyframes noteInventaire { 0% { opacity: 0; transform: translate(-50%, 1rem); } 6%, 86% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; transform: translate(-50%, 0); } }
+/* Question du jour : s'ouvre en touchant la tuile « avant le prochain ⚡ » (Mon accès) */
+button.chiffre { font: inherit; color: inherit; text-align: left; cursor: pointer; transition: border-color .2s, transform .2s; }
+button.chiffre:hover, button.chiffre:focus-visible, button.chiffre[aria-expanded="true"] { border-color: #f59e0b; }
+button.chiffre:active { transform: translateY(1px); }
+.decompte small { display: block; margin-top: .25rem; color: #fbbf24; font-size: .78rem; font-weight: 800; }
+#questions-acces { margin-top: .8rem; }
+.question .q-titre { margin: 0 0 .2rem; color: #fbbf24; font-size: .78rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.question .q-merci { margin: 0; line-height: 1.45; }
+.question.merci { border-color: #166534; background: #0b1f17; }
+/* Questionnaire du bord (Mon accès) : une petite calculette par question, grisée une fois résolue */
+.questions { display: grid; gap: .8rem; }
+.question { padding: .8rem .9rem; border-radius: 14px; border: 2px solid #334155; background: #0f1a2a; }
+.question .q-texte { margin: 0 0 .2rem; font-weight: 800; }
+.question .q-source { margin: 0 0 .6rem; color: var(--texte-2); font-size: .82rem; }
+.question .q-faux { margin: .5rem 0 0; color: var(--rouge-pale, #fca5a5); font-size: .88rem; }
+.calculette { display: grid; gap: .45rem; max-width: 250px; padding: .6rem; border-radius: 14px; background: #1e293b; box-shadow: inset 0 2px 0 #ffffff14, 0 6px 14px #0008; }
+.ecran-calc { display: flex; align-items: baseline; justify-content: flex-end; gap: .35rem; min-height: 2.4rem; padding: .3rem .6rem; border-radius: 8px;
+  background: #0b2a1f; border: 2px solid #14532d; color: #86efac; font: 700 1.5rem/1.2 Consolas, "Courier New", monospace; }
+.ecran-calc small { font-size: .8rem; color: #4ade80; }
+.ecran-calc.faux { border-color: #7f1d1d; color: #fca5a5; animation: calcFaux .35s; }
+@keyframes calcFaux { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+.touches { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem; }
+.touches button { padding: .5rem 0; border-radius: 8px; border: 0; background: #334155; color: #e2e8f0; font: 800 1.05rem "Segoe UI", sans-serif; cursor: pointer; box-shadow: 0 2px 0 #0f172a; }
+.touches button:hover { background: #475569; }
+.touches button:active { transform: translateY(1px); box-shadow: none; }
+.calculette .valider { width: 100%; }
+.rassure { margin: .1rem 0 0; font-size: .78rem; line-height: 1.45; color: #94a3b8; }
+.rassure a { color: #94a3b8; }

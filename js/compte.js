@@ -110,6 +110,8 @@ const Compte = {
         <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
         <label>Mot de passe (6 caractères min.)<input type="password" name="pass" minlength="6" required autocomplete="new-password"></label>
         <p class="aide" style="margin:0">Retenez bien votre e-mail et votre mot de passe : ils ouvrent le vaisseau et toutes les applis du bord, sur tous vos appareils.</p>
+        <p class="rassure">🔒 Votre e-mail sert seulement à vous connecter : jamais affiché à bord, jamais transmis, aucune publicité.
+          Votre accès s'efface quand vous voulez, depuis cet écran. <a href="confidentialite.html" target="_blank" rel="noopener">Confidentialité</a></p>
         <button class="btn principal" ${this.occupe ? "disabled" : ""}>Créer mon accès</button>
       </form>`;
     } else if (this.mode === "oubli") {
@@ -170,8 +172,9 @@ const Compte = {
         <div class="chiffre"><b>⚡ ${v.energie}</b><span>énergie perso</span></div>
         <div class="chiffre"><b>${v.quarts}</b><span>jour${v.quarts > 1 ? "s" : ""} de visite</span></div>
         <div class="chiffre"><b>${v.serie}</b><span>jour${v.serie > 1 ? "s" : ""} de suite</span></div>
-        <div class="chiffre decompte"><b id="decompte-eclair">${Compte.texteDecompte()}</b><span>avant le prochain ⚡</span></div>
+        <button type="button" class="chiffre decompte" id="b-question-jour" aria-expanded="${window.Questionnaire && Questionnaire.ouvert ? "true" : "false"}"><b id="decompte-eclair">${Compte.texteDecompte()}</b><span>avant le prochain ⚡</span><small id="qj-indice" hidden></small></button>
       </div>
+      <div id="questions-acces" ${window.Questionnaire && Questionnaire.ouvert ? "" : "hidden"}></div>
       <p class="aide">${v.nouveau ? "+1 ⚡ pour votre visite d'aujourd'hui." : "Votre ⚡ du jour est déjà compté."} Le prochain arrive à minuit (heure de Paris) : il suffit de passer à bord une fois dans la journée.</p>`
       : `<div class="message info">${this.sqlManquant ? "Le compteur d'énergie perso n'est pas encore installé à bord." : "Compteur d'énergie perso momentanément injoignable."}</div>`;
     el.innerHTML = `<h3>Mon accès</h3>
@@ -195,6 +198,7 @@ const Compte = {
     Journaux.acces(el.querySelector("#journaux-acces"));
     if (window.Inventaire) Inventaire.rendre(el.querySelector("#inventaire-acces"));
     if (v) this.suivreDecompte();
+    if (v && window.Questionnaire) Questionnaire.brancher(el);
     el.querySelector("#b-sortir").onclick = () => this.sortir();
     el.querySelector("#b-supprimer").onclick = () => { this.confirmerSuppression = true; this.rendre(el); };
     const c = el.querySelector("#b-confirmer");
