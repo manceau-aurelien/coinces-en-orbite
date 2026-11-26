@@ -53,10 +53,10 @@ const Compte = {
       this.sqlManquant = false;
       if (this.vaisseau && this.vaisseau.nouveau && typeof ouvrirPanneau === "function") {
         ouvrirPanneau({
-          sur: "Rapport de quart",
+          sur: "Visite du jour",
           titre: `Bienvenue à bord, ${this.pseudo}`,
-          texte: [`Rapport de quart déposé : +1 ⚡ d'énergie perso (total : ${this.vaisseau.energie}).`,
-            this.vaisseau.serie > 1 ? `${this.vaisseau.serie} jours de suite. L'équipage compte sur vous.` : "Revenez demain pour le prochain rapport."],
+          texte: [`+1 ⚡ d'énergie perso pour votre visite d'aujourd'hui (vous en avez ${this.vaisseau.energie}).`,
+            this.vaisseau.serie > 1 ? `${this.vaisseau.serie} jours de suite. L'équipage compte sur vous.` : "Revenez demain : chaque jour de visite rapporte 1 ⚡."],
           actions: [{ txt: "Mon accès", aller: "terminal/acces" }],
         });
       }
@@ -129,7 +129,7 @@ const Compte = {
       ${msg}${form}
       <div class="bloc" style="margin-top:1.4rem">
         <h4>Énergie perso</h4>
-        <p class="aide" style="margin:0">Connecté, vous déposez un rapport de quart par jour : +1 ⚡ à chaque fois. Cette énergie est la vôtre.
+        <p class="aide" style="margin:0">Chaque jour où vous revenez à bord avec votre accès, vous gagnez 1 ⚡. Cette énergie est la vôtre.
           Elle n'ouvre pas les salles du vaisseau (seule l'énergie commune le peut), mais elle ${Journaux.actifs() ? "ouvre les journaux personnels de l'équipage" : "débloquera des bonus"}.</p>
       </div>`;
     el.querySelector(".choix").onclick = (e) => {
@@ -139,15 +139,39 @@ const Compte = {
     el.querySelector("#f-acces").onsubmit = (e) => { e.preventDefault(); this.envoyer(Object.fromEntries(new FormData(e.target)), el); };
   },
 
+  /* Temps avant minuit à Paris : c'est l'heure où la base compte un nouveau jour de visite */
+  secondesAvantProchain() {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Paris", hour: "numeric", minute: "numeric", second: "numeric", hourCycle: "h23" })
+      .formatToParts(new Date()).map((x) => [x.type, +x.value]));
+    return Math.max(0, 86400 - (p.hour * 3600 + p.minute * 60 + p.second));
+  },
+  texteDecompte() {
+    const s = this.secondesAvantProchain(), h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60);
+    return h ? `${h} h ${String(m).padStart(2, "0")}` : m ? `${m} min` : "maintenant";
+  },
+  suivreDecompte() {
+    clearInterval(this.minuterie);
+    this.minuterie = setInterval(() => {
+      const b = document.getElementById("decompte-eclair");
+      if (!b) return clearInterval(this.minuterie);
+      b.textContent = this.texteDecompte();
+      if (this.secondesAvantProchain() <= 1 && !this.minuit) {   // minuit passé, page ouverte : la visite du nouveau jour compte
+        this.minuit = true;
+        setTimeout(() => { this.minuit = false; this.rapportDeQuart(true); }, 3000);
+      }
+    }, 15000);
+  },
+
   rendreProfil(el, msg) {
     const v = this.vaisseau;
     const energie = v ? `<div class="chiffres">
         <div class="chiffre"><b>⚡ ${v.energie}</b><span>énergie perso</span></div>
-        <div class="chiffre"><b>${v.quarts}</b><span>rapports de quart</span></div>
+        <div class="chiffre"><b>${v.quarts}</b><span>jour${v.quarts > 1 ? "s" : ""} de visite</span></div>
         <div class="chiffre"><b>${v.serie}</b><span>jour${v.serie > 1 ? "s" : ""} de suite</span></div>
+        <div class="chiffre decompte"><b id="decompte-eclair">${Compte.texteDecompte()}</b><span>avant le prochain ⚡</span></div>
       </div>
-      <p class="aide">${v.nouveau ? "Rapport d'aujourd'hui déposé à l'instant." : "Rapport d'aujourd'hui déjà déposé. Prochain rapport demain."}</p>`
-      : `<div class="message info">${this.sqlManquant ? "Le registre des rapports de quart n'est pas encore installé à bord." : "Registre des rapports de quart momentanément injoignable."}</div>`;
+      <p class="aide">${v.nouveau ? "+1 ⚡ pour votre visite d'aujourd'hui." : "Votre ⚡ du jour est déjà compté."} Le prochain arrive à minuit (heure de Paris) : il suffit de passer à bord une fois dans la journée.</p>`
+      : `<div class="message info">${this.sqlManquant ? "Le compteur d'énergie perso n'est pas encore installé à bord." : "Compteur d'énergie perso momentanément injoignable."}</div>`;
     el.innerHTML = `<h3>Mon accès</h3>
       <p class="aide">Connecté en tant que <b>${esc(this.pseudo)}</b>${this.user.email ? ` (${esc(this.user.email)})` : ""}.</p>
       ${msg}
@@ -166,6 +190,7 @@ const Compte = {
         dans toutes les applis reliées à cet accès seront effacées. Impossible de revenir en arrière.
         <div class="actions"><button class="btn alerte" id="b-confirmer">Oui, supprimer définitivement</button><button class="btn" id="b-annuler">Annuler</button></div></div>` : ""}`;
     Journaux.acces(el.querySelector("#journaux-acces"));
+    if (v) this.suivreDecompte();
     el.querySelector("#b-sortir").onclick = () => this.sortir();
     el.querySelector("#b-supprimer").onclick = () => { this.confirmerSuppression = true; this.rendre(el); };
     const c = el.querySelector("#b-confirmer");

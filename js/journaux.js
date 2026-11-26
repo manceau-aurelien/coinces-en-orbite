@@ -157,7 +157,7 @@ const Journaux = {
       n.ouverte = true; n.texte = r.texte;
       if (Compte.vaisseau) Compte.vaisseau.energie = r.energie;
     } catch (e) {
-      this.erreur = /insuffisante/i.test(String(e && e.message)) ? "Énergie perso insuffisante : revenez demain pour un nouveau rapport de quart."
+      this.erreur = /insuffisante/i.test(String(e && e.message)) ? "Énergie perso insuffisante : revenez demain, chaque jour de visite rapporte 1 ⚡."
         : "La note n'a pas pu s'ouvrir. Votre énergie n'a peut-être pas été dépensée : rechargez pour vérifier.";
     }
     this.occupe = false; this.confirmer = null;
