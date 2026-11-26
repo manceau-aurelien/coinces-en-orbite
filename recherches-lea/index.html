@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comprendre YouTube, les terriens &amp; la note de Léa</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="brand-block">
+          <span class="brand-badge">🛰️ Recherches de Léa · Terminal CA-3</span>
+          <div>
+            <div class="brand-title">Comprendre YouTube, les terriens &amp; la note de Léa</div>
+            <div class="brand-sub">Une journée sur les ondes terriennes · 25 novembre 2026</div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span class="pill-energy">⚡ Vaisseau : 6 % · 8 abonnés</span>
+          <button type="button" id="btn-theme" class="btn-theme" aria-pressed="false">🌙 Mode Soir</button>
+        </div>
+      </div>
+
+      <nav class="tabs-nav" role="tablist" aria-label="Sections">
+        <button type="button" class="tab-btn is-active" role="tab" aria-selected="true" data-tab="essentiel">1 · L'essentiel</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="lois">2 · Les 6 Lois</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="terriens">3 · Les terriens</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="note-lea">4 · Note de Léa</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="pistes">5 · Ma grille</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <!-- ONGLET 1 : L'ESSENTIEL -->
+    <section class="tab-panel is-active" data-panel="essentiel" role="tabpanel">
+      <article class="hero-lea">
+        <div class="portrait-box">
+          <img src="../portraits/lea.svg" alt="Portrait de Léa" />
+        </div>
+        <div>
+          <span class="section-kicker">L'idée maîtresse à retenir en 10 secondes</span>
+          <p class="hero-quote">« YouTube ne pousse pas une vidéo vers une foule : il aspire la meilleure vidéo pour un terrien précis, à la seconde où il ouvre son écran. »</p>
+          <p class="hero-note">Ce que Byte appelle « l'Algorithme » n'est pas un juge sévère caché sur Terre : c'est un miroir du public. Comprendre cette mécanique explique exactement nos chiffres actuels et ce qu'il faut changer dès notre prochain journal de bord.</p>
+        </div>
+      </article>
+
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Schéma interactif · Cliquez sur chaque étape</span>
+          <h2 class="section-title">Le vrai trajet d'une vidéo sur YouTube</h2>
+          <p class="section-lead">Cliquez sur l'une des quatre étapes ci-dessous pour voir ce que fait le moteur, le piège courant et ce que cela change pour <strong>Coincés en orbite</strong>.</p>
+        </div>
+
+        <div class="flow-steps">
+          <button type="button" class="flow-btn is-selected" data-step="aspiration" aria-pressed="true">
+            <span class="flow-num">Étape 1</span>
+            <span class="flow-label">L'Aspiration</span>
+            <span class="flow-short">Un terrien ouvre son écran</span>
+          </button>
+          <button type="button" class="flow-btn" data-step="seuil" aria-pressed="false">
+            <span class="flow-num">Étape 2 · &lt; 0,5 s</span>
+            <span class="flow-label">Le Seuil (Clic)</span>
+            <span class="flow-short">Miniature + Titre</span>
+          </button>
+          <button type="button" class="flow-btn" data-step="preuve" aria-pressed="false">
+            <span class="flow-num">Étape 3 · 15 s</span>
+            <span class="flow-label">La Preuve</span>
+            <span class="flow-short">Tenir la promesse vite</span>
+          </button>
+          <button type="button" class="flow-btn" data-step="satisfaction" aria-pressed="false">
+            <span class="flow-num">Étape 4</span>
+            <span class="flow-label">La Satisfaction</span>
+            <span class="flow-short">Rétention &amp; envie de revenir</span>
+          </button>
+        </div>
+
+        <div class="flow-detail" aria-live="polite">
+          <div class="detail-col">
+            <h4>⚙️ Ce que fait YouTube</h4>
+            <p id="flow-youtube"></p>
+          </div>
+          <div class="detail-col">
+            <h4>⚠️ Le piège à éviter</h4>
+            <p id="flow-piege"></p>
+          </div>
+          <div class="detail-col">
+            <h4>🛰️ Pour notre vaisseau</h4>
+            <p id="flow-vaisseau"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Relevé du 25 novembre 2026</span>
+          <h2 class="section-title">Nos quatre chiffres actuels décodés</h2>
+          <p class="section-lead">Chaque chiffre de la chaîne <code>@coinces-en-orbite</code> s'explique directement par ces règles.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value is-alert">0,0 %</div>
+            <div class="stat-title">Taux de clics (journal n° 1)</div>
+            <p class="stat-desc">87 affichages sans clic : mon image « On a besoin de vous » demandait un service avant de montrer une énigme lisible sans contexte.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value is-amber">112 / 165</div>
+            <div class="stat-title">Vues sur nos 2 Shorts</div>
+            <p class="stat-desc">Contre 40 et 50 sur nos journaux longs : en Short, la vidéo démarre toute seule devant le passant. C'est notre porte d'entrée à froid.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value is-ok">8</div>
+            <div class="stat-title">Abonnés à ce jour</div>
+            <p class="stat-desc">Aucune pénalité pour une petite chaîne : une seule vidéo qui accroche vraiment un profil peut doubler l'audience sans attendre mille abonnés.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-title">Commentaire visible</div>
+            <p class="stat-desc">Regarder sans écrire est la norme. Les appels ouverts (« Dites-nous quelque chose ») figent ; seule une question minuscule sur soi déclenche la réponse.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="step-footer">
+        <span class="kbd-hint">Astuce clavier : touches <strong>1–5</strong> ou flèches <strong>← →</strong></span>
+        <button type="button" class="btn-step is-primary" data-go="lois">Étape suivante : Les 6 Lois →</button>
+      </div>
+    </section>
+
+    <!-- ONGLET 2 : LES 6 LOIS -->
+    <section class="tab-panel" data-panel="lois" role="tabpanel" hidden>
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Mécanique de la plateforme · 2025–2026</span>
+          <h2 class="section-title">Les 6 lois qui gouvernent YouTube</h2>
+          <p class="section-lead">D'après ce qu'expliquent ceux qui font tourner la machine, et ce qu'en racontent les créateurs terriens qui réussissent.</p>
+        </div>
+
+        <div class="laws-grid">
+          <article class="law-card">
+            <div class="law-head">
+              <span class="law-num">Loi 1</span>
+              <h3 class="law-title">L'aspiration, jamais la poussée</h3>
+            </div>
+            <p class="law-summary">YouTube ne « pousse » pas votre vidéo : il l'aspire uniquement quand elle correspond au spectateur qui vient d'ouvrir l'écran.</p>
+            <div class="badge-row">
+              <div class="pill-box pill-bad"><strong>🔴 Idée reçue</strong>« L'algorithme nous enterre parce qu'on n'a que 8 abonnés ou un départ lent. »</div>
+              <div class="pill-box pill-ok"><strong>🟢 Réalité</strong>Il n'y a aucune pénalité de taille, ni condamnation après une heure calme. Le moteur répond individu par individu.</div>
+              <div class="pill-box pill-ship"><strong>🛰️ Pour nous</strong>Arrêter de parler à « l'algorithme » comme à un ennemi : parler à un terrien précis à un moment précis.</div>
+            </div>
+          </article>
+
+          <article class="law-card">
+            <div class="law-head">
+              <span class="law-num">Loi 2</span>
+              <h3 class="law-title">Le contrat Miniature × 15 secondes</h3>
+            </div>
+            <p class="law-summary">La miniature ouvre un écart de curiosité compréhensible par quelqu'un qui ne nous connaît pas ; les 15 premières secondes prouvent qu'on n'a pas menti.</p>
+            <div class="badge-row">
+              <div class="pill-box pill-bad"><strong>🔴 Idée reçue</strong>« Il suffit d'un beau décor du vaisseau ou d'un texte appelant à l'aide. »</div>
+              <div class="pill-box pill-ok"><strong>🟢 Réalité</strong>1 seule anomalie visuelle claire, lisible même sans avoir vu nos journaux précédents, puis action immédiate dès 0:00.</div>
+              <div class="pill-box pill-ship"><strong>🛰️ Pour nous</strong>Chaque journal de bord s'ouvre sur ce qui se passe à bord, tout de suite. Plus jamais sur un appel à l'aide.</div>
+            </div>
+          </article>
+
+          <article class="law-card">
+            <div class="law-head">
+              <span class="law-num">Loi 3</span>
+              <h3 class="law-title">Deux moteurs : Couloir contre Salon</h3>
+            </div>
+            <p class="law-summary">Les Shorts recrutent dans l'instant ; les vidéos longues bâtissent l'attachement sur la durée.</p>
+            <div class="badge-row">
+              <div class="pill-box pill-bad"><strong>🔴 Idée reçue</strong>« Comme les Shorts font 3× plus de vues, abandonnons les vidéos longues. »</div>
+              <div class="pill-box pill-ok"><strong>🟢 Réalité</strong>En Short on gagne par <em>Regardé vs Balayé</em> en 2 s ; en vidéo longue (souvent sur TV le soir) on gagne par l'histoire.</div>
+              <div class="pill-box pill-ship"><strong>🛰️ Pour nous</strong>Utiliser les Shorts comme porte d'entrée reliée au journal de bord long via le champ <em>Vidéo associée</em>.</div>
+            </div>
+          </article>
+
+          <article class="law-card">
+            <div class="law-head">
+              <span class="law-num">Loi 4</span>
+              <h3 class="law-title">La satisfaction passe avant les clics</h3>
+            </div>
+            <p class="law-summary">Le temps de visionnage ne suffit plus : YouTube mesure ce que le terrien ressent une fois la vidéo finie.</p>
+            <div class="badge-row">
+              <div class="pill-box pill-bad"><strong>🔴 Idée reçue</strong>« Un titre piège ou du remplissage pour allonger les minutes fait monter la vidéo. »</div>
+              <div class="pill-box pill-ok"><strong>🟢 Réalité</strong>Sondages post-vue, j'aime, partages, retours sur la chaîne et poursuite de session pénalisent tout clic déceptif.</div>
+              <div class="pill-box pill-ship"><strong>🛰️ Pour nous</strong>Tenir chaque promesse et privilégier des scènes vivantes plutôt que du remplissage artificiel.</div>
+            </div>
+          </article>
+
+          <article class="law-card">
+            <div class="law-head">
+              <span class="law-num">Loi 5</span>
+              <h3 class="law-title">Un fil conducteur lisible</h3>
+            </div>
+            <p class="law-summary">Mélanger des thèmes sans cadre commun brouille à quel public recommander la chaîne.</p>
+            <div class="badge-row">
+              <div class="pill-box pill-bad"><strong>🔴 Idée reçue</strong>« Faisons un jour un tuto d'appli brut, le lendemain de la théorie, puis un jeu sans lien. »</div>
+              <div class="pill-box pill-ok"><strong>🟢 Réalité</strong>Le moteur regroupe les spectateurs qui aiment un univers cohérent et reviennent pour la même promesse.</div>
+              <div class="pill-box pill-ship"><strong>🛰️ Pour nous</strong>Tout passe par la vie du bord : ce que nous découvrons, nous le vivons à l'écran, ensemble.</div>
+            </div>
+          </article>
+
+          <article class="law-card">
+            <div class="law-head">
+              <span class="law-num">Loi 6</span>
+              <h3 class="law-title">Briser le silence des commentaires</h3>
+            </div>
+            <p class="law-summary">Un appel ouvert produit zéro réponse ; une micro-question sur le spectateur le fait réagir tout de suite.</p>
+            <div class="badge-row">
+              <div class="pill-box pill-bad"><strong>🔴 Idée reçue</strong>« Écrivez-nous quelque chose en commentaire pour nous aider. »</div>
+              <div class="pill-box pill-ok"><strong>🟢 Réalité</strong>Effort cognitif nul = réponse élevée : choix binaire personnel, petite bêtise à corriger ou détail caché.</div>
+              <div class="pill-box pill-ship"><strong>🛰️ Pour nous</strong>Finir sur une seule question simple (« Bras droit ou bras gauche dessus ? ») ou une petite bêtise affirmée avec aplomb.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Architecture de chaîne</span>
+          <h2 class="section-title">Le Couloir (Shorts) &amp; le Salon (Vidéos longues)</h2>
+        </div>
+
+        <div class="versus-formats">
+          <div class="format-box">
+            <span class="format-tag is-short">⚡ Shorts · Format 9:16</span>
+            <h3>Le Couloir panoramique</h3>
+            <ul class="format-list">
+              <li>• Aucun choix de miniature : lecture automatique dans le flux.</li>
+              <li>• Décision prise en <strong>1 à 2 secondes</strong> : regarder ou balayer.</li>
+              <li>• Déjà <strong>112 à 165 vues</strong> par essai (3× plus que les longues).</li>
+              <li>• Parfait pour : une course de Byte, une énigme express, un défi de trois secondes.</li>
+            </ul>
+          </div>
+
+          <div class="format-bridge">
+            <span>🔗 Pont officiel</span>
+            <strong>Vidéo associée</strong>
+            <span>Seul lien cliquable sous un Short</span>
+          </div>
+
+          <div class="format-box">
+            <span class="format-tag is-long">🎬 Longues · Format 16:9</span>
+            <h3>Le Salon de la Terre</h3>
+            <ul class="format-list">
+              <li>• Le terrien clique volontairement (ordinateur ou TV de salon le soir).</li>
+              <li>• Fidélise, attache aux voix et donne envie de visiter le vaisseau.</li>
+              <li>• Placé automatiquement à l'accueil de la chaîne pour les curieux.</li>
+              <li>• Parfait pour : l'histoire vécue, l'enquête, le réveil progressif de l'équipage.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Passer de 0 à des dizaines de réponses</span>
+          <h2 class="section-title">Les 3 déclencheurs qui font commenter</h2>
+        </div>
+
+        <div class="keys-3">
+          <div class="key-card">
+            <h4>1 · Question binaire sur soi</h4>
+            <p>Répondre ne demande aucune réflexion compliquée et parle directement de la personne qui regarde.</p>
+            <div class="key-example">Exemple : « Là tout de suite, quel bras est passé par-dessus l'autre ? Droit ou gauche ? »</div>
+          </div>
+          <div class="key-card">
+            <h4>2 · Erreur qui démange</h4>
+            <p>Quand un personnage affirme une petite bêtise avec sérieux, les terriens adorent le corriger gentiment.</p>
+            <div class="key-example">Exemple : quelqu'un qui affirme très sérieusement un chiffre faux, devant tout le monde.</div>
+          </div>
+          <div class="key-card">
+            <h4>3 · Anomalie muette</h4>
+            <p>Un détail posé à l'arrière-plan que les personnages ne remarquent pas encore pousse à prévenir dans les commentaires.</p>
+            <div class="key-example">Exemple : un objet posé là où il n'a rien à faire, que personne à l'écran ne remarque.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="step-footer">
+        <button type="button" class="btn-step" data-go="essentiel">← Retour : L'essentiel</button>
+        <button type="button" class="btn-step is-primary" data-go="terriens">Étape suivante : Les terriens →</button>
+      </div>
+    </section>
+
+    <!-- ONGLET 3 : LES TERRIENS -->
+    <section class="tab-panel" data-panel="terriens" role="tabpanel" hidden>
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Observation de terrain · Ce que j'ai découvert</span>
+          <h2 class="section-title">Qui sont les terriens quand personne ne leur demande rien ?</h2>
+          <p class="section-lead">Au lieu d'une froide encyclopédie, j'ai découvert des rituels intimes, patients et parfois absurdes.</p>
+        </div>
+
+        <div class="rituals-grid">
+          <div class="ritual-card">
+            <span class="ritual-time">11:14 · 42 minutes sans parole</span>
+            <h3 class="ritual-title">Restaurations muettes</h3>
+            <p class="ritual-text">Des millions de vues sur deux mains qui nettoient un vieux cadenas rouillé jusqu'au clic final. Plaisir pur de voir ce qui est cassé redevenir fidèle.</p>
+          </div>
+          <div class="ritual-card">
+            <span class="ritual-time">13:05 · Boucles de 10 heures</span>
+            <h3 class="ritual-title">Pluie contre une vitre</h3>
+            <p class="ritual-text">Ils ont de vrais nuages dehors, mais lancent dix heures de pluie enregistrée pour étudier ou ne pas dormir dans le silence.</p>
+          </div>
+          <div class="ritual-card">
+            <span class="ritual-time">14:10 · Voix tout près du micro</span>
+            <h3 class="ritual-title">ASMR &amp; gestes lents</h3>
+            <p class="ritual-text">Gratter, froisser et tapoter une boîte en carton, sans un mot, pour aider à distance des inconnus épuisés à s'endormir.</p>
+          </div>
+          <div class="ritual-card">
+            <span class="ritual-time">15:30 · Quotidien en gros plan</span>
+            <h3 class="ritual-title">Colis, cuisine &amp; défis</h3>
+            <p class="ritual-text">Ouvrir des cartons, cuisiner en plan zénithal, tenir 24 heures dans une pièce : transformer l'ordinaire en petit spectacle partagé.</p>
+          </div>
+          <div class="ritual-card">
+            <span class="ritual-time">16:45 · Miroirs en chaîne</span>
+            <h3 class="ritual-title">Vidéos de réaction</h3>
+            <p class="ritual-text">Regarder quelqu'un découvrir quelque chose qu'on aime déjà, juste pour revivre la surprise à deux. Et en ce moment, presque toutes réagissent au même jeu : GTA VI. Une ville au soleil, des palmiers, des néons. Toute la planète regarde dans la même direction.</p>
+          </div>
+          <div class="ritual-card">
+            <span class="ritual-time">17:50 · Sous de vieux morceaux</span>
+            <h3 class="ritual-title">« Qui est encore là en 2026 ? »</h3>
+            <p class="ritual-text">Des inconnus allument un repère dans les commentaires comme un feu sur une plage, pour vérifier qu'un autre vivant est passé là ce soir.</p>
+          </div>
+        </div>
+
+        <div class="banner-takeaway">
+          💡 Ma conclusion : les terriens ne vont pas sur YouTube uniquement pour apprendre ou tuer le temps. <strong>Ils y vont pour tenir compagnie, et pour qu'on leur tienne compagnie.</strong>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Bascule des tendances 2025–2026</span>
+          <h2 class="section-title">Pourquoi le vrai bat le bruit aujourd'hui</h2>
+        </div>
+
+        <div class="trends-split">
+          <div class="trend-col is-down">
+            <h3>📉 Ce qui sature les terriens</h3>
+            <ul>
+              <li>Montage hystérique coupé toutes les demi-secondes sans respiration.</li>
+              <li>Miniatures clonées à base de bouches hurlantes et de flèches rouges partout.</li>
+              <li>Fausse perfection lisse ou vidéos artificielles sans âme ni vécu.</li>
+              <li>Promesses gonflées qui sonnent faux dès la dixième seconde.</li>
+            </ul>
+          </div>
+          <div class="trend-col is-up">
+            <h3>📈 Ce qui les retient durablement</h3>
+            <ul>
+              <li>Voix sincère et récit incarné (enquêtes, journaux, essais vivants).</li>
+              <li>Petits défauts assumés : erreurs, hésitations, complicité réelle.</li>
+              <li>Sujets « miroirs » : comprendre nos gestes, nos biais et nos réactions sans jugement.</li>
+              <li>Histoires qui se suffisent à elles-mêmes, liées par un fil rouge mystérieux qui donne envie de revenir.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <span class="section-kicker">Duel interactif · Filtrer par sujet</span>
+          <h2 class="section-title">Ce que Byte comprend de travers, et ce que j'en pense</h2>
+          <p class="section-lead">Byte lit les chiffres au premier degré. Moi, j'essaie de lire ce qu'ils veulent dire.</p>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filtrer le duel par thème">
+          <button type="button" class="filter-btn is-active" data-topic="tous" aria-pressed="true">Tout afficher (5)</button>
+          <button type="button" class="filter-btn" data-topic="algo" aria-pressed="false">L'algorithme</button>
+          <button type="button" class="filter-btn" data-topic="tendances" aria-pressed="false">Les tendances</button>
+          <button type="button" class="filter-btn" data-topic="clics" aria-pressed="false">Le 0 % de clics</button>
+          <button type="button" class="filter-btn" data-topic="silence" aria-pressed="false">Les 0 commentaires</button>
+          <button type="button" class="filter-btn" data-topic="formats" aria-pressed="false">Shorts vs Longues</button>
+        </div>
+
+        <div class="duel-list">
+          <article class="duel-row" data-topic="algo">
+            <div class="duel-topic">Sujet 1 · L'algorithme</div>
+            <div class="duel-side">
+              <div class="duel-avatar is-byte"><img src="../portraits/byte.svg" alt="Byte" /></div>
+              <div>
+                <div class="duel-speaker is-byte">Byte</div>
+                <p>« C'est un gardien froid enfermé sur Terre qui nous distribue des zéros et bloque la jauge depuis 2012. »</p>
+              </div>
+            </div>
+            <div class="duel-side">
+              <div class="duel-avatar is-lea"><img src="../portraits/lea.svg" alt="Léa" /></div>
+              <div>
+                <div class="duel-speaker is-lea">Moi</div>
+                <p>« Il n'y a aucun gardien. La machine aspire seulement ce qu'un terrien attend au moment où il ouvre son écran. »</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="duel-row" data-topic="tendances">
+            <div class="duel-topic">Sujet 2 · Les tendances</div>
+            <div class="duel-side">
+              <div class="duel-avatar is-byte"><img src="../portraits/byte.svg" alt="Byte" /></div>
+              <div>
+                <div class="duel-speaker is-byte">Byte</div>
+                <p>« J'ai listé les sept formats viraux : déballons un carton vide, chuchotons des chiffres en ASMR et dormons 24 h en direct. »</p>
+              </div>
+            </div>
+            <div class="duel-side">
+              <div class="duel-avatar is-lea"><img src="../portraits/lea.svg" alt="Léa" /></div>
+              <div>
+                <div class="duel-speaker is-lea">Moi</div>
+                <p>« Copier une recette à froid sonne creux. Ce qui retient les terriens, c'est notre vraie traversée et une présence sincère. »</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="duel-row" data-topic="clics">
+            <div class="duel-topic">Sujet 3 · Le 0 % de clics</div>
+            <div class="duel-side">
+              <div class="duel-avatar is-byte"><img src="../portraits/byte.svg" alt="Byte" /></div>
+              <div>
+                <div class="duel-speaker is-byte">Byte</div>
+                <p>« Statistiquement, ton visage fait fuir. Écrivons en capitales avec trois flèches rouges géantes. »</p>
+              </div>
+            </div>
+            <div class="duel-side">
+              <div class="duel-avatar is-lea"><img src="../portraits/lea.svg" alt="Léa" /></div>
+              <div>
+                <div class="duel-speaker is-lea">Moi</div>
+                <p>« On demandait de l'aide avant d'éveiller la curiosité. Montrons une anomalie claire qu'on comprend en une demi-seconde. »</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="duel-row" data-topic="silence">
+            <div class="duel-topic">Sujet 4 · Les 0 commentaires</div>
+            <div class="duel-side">
+              <div class="duel-avatar is-byte"><img src="../portraits/byte.svg" alt="Byte" /></div>
+              <div>
+                <div class="duel-speaker is-byte">Byte</div>
+                <p>« Zéro mot sous quatre vidéos : il n'y a personne derrière la vitre, ce sont des chiffres fantômes. »</p>
+              </div>
+            </div>
+            <div class="duel-side">
+              <div class="duel-avatar is-lea"><img src="../portraits/lea.svg" alt="Léa" /></div>
+              <div>
+                <div class="duel-speaker is-lea">Moi</div>
+                <p>« Regarder en silence est normal sur Terre. Posons une seule question minuscule sur eux, ou glissons une bêtise à corriger. »</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="duel-row" data-topic="formats">
+            <div class="duel-topic">Sujet 5 · Shorts vs Longues</div>
+            <div class="duel-side">
+              <div class="duel-avatar is-byte"><img src="../portraits/byte.svg" alt="Byte" /></div>
+              <div>
+                <div class="duel-speaker is-byte">Byte</div>
+                <p>« Mon Short a trois fois plus de vues pour quarante secondes. Arrêtons les vidéos longues, rentabilité maximale. »</p>
+              </div>
+            </div>
+            <div class="duel-side">
+              <div class="duel-avatar is-lea"><img src="../portraits/lea.svg" alt="Léa" /></div>
+              <div>
+                <div class="duel-speaker is-lea">Moi</div>
+                <p>« Les Shorts font se croiser dans le couloir ; les journaux longs invitent au salon. Il faut relier les deux. »</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="step-footer">
+        <button type="button" class="btn-step" data-go="lois">← Retour : Les 6 Lois</button>
+        <button type="button" class="btn-step is-primary" data-go="note-lea">Étape suivante : Lire la Note de Léa →</button>
+      </div>
+    </section>
+
+    <!-- ONGLET 4 : NOTE EXPÉRIMENTALE DE LÉA (0 MOT HUMAIN) -->
+    <section class="tab-panel" data-panel="note-lea" role="tabpanel" hidden>
+      <div class="note-layout">
+        <aside class="note-sidebar">
+          <h3>Sommaire rapide</h3>
+          <nav class="toc-links">
+            <a href="#note-ouverture">Ouverture · CA-3</a>
+            <a href="#note-terriens">I · Ce que font les terriens</a>
+            <a href="#note-lois">II · Les 5 lois de Léa</a>
+            <a href="#note-sora">III · Ce qu'il manque (Sora)</a>
+            <a href="#note-ps-byte">P.-S. pour Byte</a>
+          </nav>
+
+          <h3>Confort de lecture</h3>
+          <div class="font-controls" role="group" aria-label="Taille du texte de la note">
+            <button type="button" class="font-btn" data-size="15" aria-pressed="false">A-</button>
+            <button type="button" class="font-btn is-active" data-size="17" aria-pressed="true">A</button>
+            <button type="button" class="font-btn" data-size="19" aria-pressed="false">A+</button>
+          </div>
+        </aside>
+
+        <article class="note-article">
+          <header class="note-meta" id="note-ouverture">
+            <div class="note-meta-avatar">
+              <img src="../portraits/lea.svg" alt="Léa" />
+            </div>
+            <div>
+              <h2>Étude exploratoire n° 1 — Les ondes terriennes et les lois du réseau</h2>
+              <div class="note-meta-sub">Fichier ouvert par Léa · Terminal CA-3 · 25 novembre 2026, 20:48 · Énergie : 6 % · Casque actif</div>
+            </div>
+          </header>
+
+          <p>J'avais promis hier soir à ce journal qu'aujourd'hui serait plus léger. Pas de code, pas de nuit blanche. Pour la nuit, je plaide à moitié coupable : je n'ai pas écrit une seule ligne de code, j'ai seulement ouvert les dossiers de ceux qui dorment. Ce n'est pas la même chose. Byte dirait que si. Aujourd'hui, en tout cas, rien que du temps devant l'écran, à regarder ce que les terriens mettent sur YouTube quand personne à bord ne leur demande rien.</p>
+          <p>J'ai appelé ce fichier « Étude exploratoire » pour le cas où Byte passerait derrière moi avec son air d'inspecteur des compteurs. S'il voit un titre sérieux, il oubliera peut-être de calculer combien d'heures le casque est resté allumé. En vérité, au bout de vingt minutes, j'avais déjà arrêté de classer mes notes proprement. J'étais juste fascinée. Et je dois l'avouer ici : entre deux vidéos sérieuses, la machine m'en a servi d'autres que je n'avais pas demandées, et je les ai regardées quand même. Je n'ai pas vu l'heure passer.</p>
+
+          <h3 id="note-terriens">I. Ce que font les terriens quand personne ne les regarde</h3>
+          <p>Avant d'ouvrir le réseau en grand, j'avais une idée assez naïve de ce qu'on devait trouver sur la plateforme la plus fréquentée d'une planète technologique. Je m'attendais à des bibliothèques de savoir, des cours de physique orbitale, des débats sur l'avenir de l'espèce, de la musique, des nouvelles du monde. Tout cela existe. Mais à côté, il y a l'immense océan de ce qu'ils regardent vraiment, et qui m'a prise complètement au dépourvu.</p>
+
+          <div class="time-entry">
+            <span class="time-tag">11:14</span>
+            <p>Je suis tombée sur une vidéo de quarante-deux minutes sans une seule parole. Deux mains gantées démontent un vieux cadenas rouillé, trempent chaque ressort dans un bain clair, polissent le laiton, huilent le mécanisme et le referment. Un clic net à la fin. Quatre millions de vues. Juste quelque chose de cassé qui redevient propre et fidèle. Byte n'y comprendrait rien : pour lui, une réparation se mesure en secondes gagnées. Moi, je suis restée jusqu'au clic final.</p>
+          </div>
+
+          <div class="time-entry">
+            <span class="time-tag">13:05</span>
+            <p>J'ai découvert des pistes audio de dix heures de pluie contre une vitre. Dix heures. Alors qu'il suffit littéralement d'ouvrir une fenêtre chez eux pour entendre de la vraie pluie. Et juste à côté, des chambres silencieuses où une terrienne gratte et tapote une boîte en carton devant deux micros, sans dire un mot : des petits bruits répétitifs, presque rien, et des milliers d'inconnus s'endorment en l'écoutant.</p>
+          </div>
+
+          <div class="time-entry">
+            <span class="time-tag">15:30</span>
+            <p>J'ai vu un terrien ouvrir des colis pendant trente minutes, un autre cuisiner sans jamais montrer son visage, un groupe d'amis s'enfermer vingt-quatre heures dans une pièce bleue, un terrien réagir à la vidéo d'un autre qui réagissait lui-même à une troisième. Et partout, le même jeu revenait partout : GTA VI. Une ville écrasée de soleil, des palmiers, des néons, et des millions de terriens qui le décortiquent image par image. Celui-là, il faudra que j'y revienne. Et sous une vieille chanson d'il y a quinze ans, des centaines de messages récents disaient presque tous : <em>« Qui écoute encore ça en 2026 ? »</em></p>
+          </div>
+
+          <p>C'est là que quelque chose s'est éclairé pour moi. Je crois que les terriens ne vont pas seulement sur YouTube pour apprendre ou pour tuer le temps. <strong>Ils y vont pour tenir compagnie, et pour qu'on leur tienne compagnie.</strong> Nous, coincés en orbite avec nos quelques pour cent, on a passé deux journaux de bord à crier dans un couloir en espérant qu'on nous réponde par pitié. Eux se retrouvent autour des choses qu'ils aiment réparer, raconter ou comprendre.</p>
+
+          <h3 id="note-lois">II. Le fantôme que Byte appelle « l'Algorithme »</h3>
+          <p>Byte parle de l'algorithme comme d'un juge enfermé dans une cave de la Terre, qui lit nos fichiers d'un air sévère et décide souverainement de fermer le robinet des vues. J'ai passé tout l'après-midi à croiser nos minuscules statistiques avec ce que racontent les créateurs terriens qui réussissent — et je peux déjà lui dire que ce juge n'existe pas. Voilà les cinq lois que j'en retiens ce soir.</p>
+
+          <div class="lea-law-box">
+            <h4>1. La loi de l'aspiration (la machine n'envoie rien, elle vient chercher)</h4>
+            <p>Le réseau ne jette pas notre journal à la figure d'une foule. À la seconde où un terrien ouvre son écran — vite fait dans les transports à midi, ou posé le soir —, le système regarde tout ce qui flotte sur YouTube et <strong>aspire</strong> ce que ce terrien précis pourrait avoir envie de voir maintenant. Il ne punit pas une petite chaîne de huit abonnés, ni un démarrage calme. Quand personne ne clique, c'est simplement que nous n'avons pas su dire pourquoi notre fenêtre méritait qu'on s'y arrête.</p>
+          </div>
+
+          <div class="lea-law-box">
+            <h4>2. La loi de la porte fermée (la miniature et les quinze premières secondes)</h4>
+            <p>Je comprends enfin nos <code>0,0 %</code> de clics sur notre premier journal de bord. J'avais écrit <em>« On a besoin de vous »</em> sur l'image. Quand on croise une porte fermée dans une rue inconnue, une pancarte qui dit <em>« Aidez-moi »</em> sans explication met mal à l'aise ; on accélère le pas. Ce qui fait tourner la poignée en moins d'une demi-seconde, c'est <strong>une anomalie simple visible d'un seul regard</strong>, compréhensible même sans connaître ce qui précède. Et si quelqu'un ouvre, les <strong>quinze premières secondes</strong> doivent montrer aussitôt ce que l'affiche promettait.</p>
+          </div>
+
+          <div class="lea-law-box">
+            <h4>3. La loi du couloir et du salon (Shorts contre Journaux longs)</h4>
+            <ul>
+              <li><strong>Les Shorts sont notre couloir panoramique :</strong> personne ne choisit une image ; la vidéo démarre au visage du passant, qui décide en deux battements de cils s'il reste ou s'il glisse vers la suivante. C'est pour cela que nos deux Shorts dépassent la centaine de vues.</li>
+              <li><strong>Les journaux longs sont notre salon :</strong> là-bas, le terrien a choisi d'entrer, souvent sur grand écran, pour suivre une vraie histoire et s'attacher à des voix. Et la vidéo associée sous chaque Short est la porte qui relie le couloir au salon.</li>
+            </ul>
+          </div>
+
+          <div class="lea-law-box">
+            <h4>4. La loi du regret (au-delà des minutes)</h4>
+            <p>Beaucoup de chaînes utilisent des pièges : titres criards, promesses gonflées, montage si nerveux qu'on ne respire plus. Mais le réseau mesure désormais ce que le terrien ressent après coup. S'il se sent piégé ou vidé par du bruit, il ne revient pas et la machine cesse d'aspirer vers cette chaîne. Un clic volé aujourd'hui coûte dix recommandations demain.</p>
+          </div>
+
+          <div class="lea-law-box">
+            <h4>5. La loi de l'usure et de la vitre (pourquoi nos huit abonnés se taisent encore)</h4>
+            <p>Les terriens sont fatigués des visages figés dans de fausses grimaces et cherchent ce qui sonne vrai, imparfait, vivant. Et s'ils ne laissent aucun mot sous nos quatre vidéos, ce n'est pas par absence : sur Terre, presque tout le monde regarde derrière la vitre en silence. Ils n'écrivent vraiment que si on leur tend <strong>une seule question minuscule sur eux-mêmes</strong>, une énigme visuelle posée sans commentaire, ou une bêtise affirmée avec aplomb qu'ils auront envie de corriger.</p>
+          </div>
+
+          <h3 id="note-sora">III. Ce qui m'a arrêtée, et ce qu'il nous manque encore</h3>
+          <div class="time-entry">
+            <span class="time-tag">20:40</span>
+            <p>J'ai regardé des centaines de terriens aujourd'hui. Je sais maintenant ce qui les intéresse. Mais je me rends compte que je n'ai vu que l'image qu'ils veulent donner d'eux : ce sont eux qui se filment, eux qui choisissent ce qu'on voit. Qui ils sont quand la caméra s'éteint, ça, je n'en sais rien.</p>
+          </div>
+
+          <div class="sora-callout">
+            <div class="sora-callout-avatar">
+              <img src="../portraits/sora.svg" alt="Portrait de Sora" />
+            </div>
+            <div>
+              <strong>Piste du sas 03 · Sora</strong>
+              <p style="margin:4px 0 0;">Dans les archives de ceux qui dorment, j'ai trouvé la fiche de Sora, juste à côté de mon sas. Son domaine : l'étude du vivant, trouver du sens dans une multitude de variables. L'archive est incomplète, je ne sais rien de sa façon de travailler. Mais si quelqu'un à bord peut nous aider à comprendre les terriens, c'est peut-être elle. En attendant, je ne veux pas copier les sept formats bruyants de la Terre : nous continuerons à raconter le bord pour de vrai, en montrant dès la première image ce qu'il y a d'inexplicable ici-haut.</p>
+            </div>
+          </div>
+
+          <aside class="byte-ps-card" id="note-ps-byte">
+            <div class="byte-ps-avatar">
+              <img src="../portraits/byte.svg" alt="Portrait de Byte" />
+            </div>
+            <div>
+              <strong>P.-S. pour Byte, si tu lis ceci avant d'aller vérifier ta roue :</strong>
+              <p style="margin:4px 0 0;">J'ai regardé nos journaux de bord plusieurs fois aujourd'hui. Ça ne fait pas monter le compteur, j'ai vérifié : la machine ne compte pas nos propres visites. En cherchant, je suis tombée sur ton Short du couloir. Cent soixante-cinq vues, et la jauge qui remonte : je te pardonne la plaque du plafond. La plaque tient, paraît-il. Je vérifierai demain matin.</p>
+            </div>
+          </aside>
+        </article>
+      </div>
+
+      <div class="step-footer">
+        <button type="button" class="btn-step" data-go="terriens">← Retour : Les terriens</button>
+        <button type="button" class="btn-step is-primary" data-go="pistes">Étape suivante : Ma grille →</button>
+      </div>
+    </section>
+
+    <!-- ONGLET 5 : PISTES ÉP. 3 & CHECK-LIST -->
+    <section class="tab-panel" data-panel="pistes" role="tabpanel" hidden>
+      <section class="cards-3">
+        <article class="action-card">
+          <span class="action-tag">Décision n° 1</span>
+          <h3>Plus de pancarte « Aidez-nous »</h3>
+          <p>Chaque journal de bord s'ouvrira sur ce qui se passe à bord, tout de suite. Si les terriens viennent, ce sera par curiosité, pas par pitié.</p>
+        </article>
+        <article class="action-card">
+          <span class="action-tag">Décision n° 2</span>
+          <h3>Relier le couloir et le salon</h3>
+          <p>Chaque Short renverra vers son journal de bord, par la vidéo associée. Le couloir amène les passants, le salon leur donne envie de rester.</p>
+        </article>
+        <article class="action-card">
+          <span class="action-tag">Décision n° 3</span>
+          <h3>Arrêter de regarder n'importe quoi</h3>
+          <p>J'ai beaucoup appris, mais pas en regardant tout ce que la machine me servait. Ici, tout a un coût. Je chercherai ce dont nous avons besoin, et je m'arrêterai là.</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="checklist-header">
+          <div>
+            <span class="section-kicker">À cocher avant chaque journal de bord</span>
+            <h2 class="section-title">Passer nos journaux de bord au crible de mes 6 lois</h2>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+            <div class="score-pill">
+              <span>Score :</span>
+              <span id="score-count">0 / 6</span>
+              <div class="score-bar"><div class="score-fill" id="score-fill"></div></div>
+            </div>
+            <button type="button" id="btn-toggle-examples" class="btn-example" aria-pressed="false">Voir ce que donne notre journal de bord n° 1</button>
+          </div>
+        </div>
+
+        <div class="checklist-items" id="checklist-items">
+          <div class="check-item">
+            <label class="check-label">
+              <input type="checkbox" class="check-input" />
+              <div>
+                <div class="check-title">1. Un titre qu'on comprend sans nous connaître</div>
+                <div class="check-sub">Un inconnu doit comprendre l'énigme ou la situation sans avoir vu nos journaux précédents.</div>
+              </div>
+            </label>
+            <div class="check-example"><strong>Journal n° 1 :</strong> « On s'est réveillés coincés en orbite avec 3 % d'énergie » : on le comprend sans nous connaître. Réussi.</div>
+          </div>
+
+          <div class="check-item">
+            <label class="check-label">
+              <input type="checkbox" class="check-input" />
+              <div>
+                <div class="check-title">2. Miniature à 1 seule anomalie visuelle claire</div>
+                <div class="check-sub">Un objet ou une expression nette, sans redondance avec le titre ni appel à la pitié.</div>
+              </div>
+            </label>
+            <div class="check-example"><strong>Journal n° 1 :</strong> « On a besoin de vous » : une pancarte qui demande de l'aide, pas une énigme. Raté, nos 0,0 % de clics le disent.</div>
+          </div>
+
+          <div class="check-item">
+            <label class="check-label">
+              <input type="checkbox" class="check-input" />
+              <div>
+                <div class="check-title">3. Promesse lancée dans les 15 à 20 premières secondes</div>
+                <div class="check-sub">Pas de long résumé au début : l'enjeu du jour démarre immédiatement.</div>
+              </div>
+            </label>
+            <div class="check-example"><strong>Journal n° 1 :</strong> Ceux qui sont venus sont repartis avant la première minute : ce que promettait l'image n'est pas arrivé assez vite. À revoir.</div>
+          </div>
+
+          <div class="check-item">
+            <label class="check-label">
+              <input type="checkbox" class="check-input" />
+              <div>
+                <div class="check-title">4. Unité du vaisseau &amp; satisfaction réelle</div>
+                <div class="check-sub">La scène fait avancer la vie du bord tout en tenant sa promesse du début jusqu'à la chute.</div>
+              </div>
+            </label>
+            <div class="check-example"><strong>Journal n° 1 :</strong> Tout se passe à bord, de mon réveil jusqu'à la publication. Ça, c'est tenu.</div>
+          </div>
+
+          <div class="check-item">
+            <label class="check-label">
+              <input type="checkbox" class="check-input" />
+              <div>
+                <div class="check-title">5. Question binaire finale + petit détail ou erreur à relever</div>
+                <div class="check-sub">Remplacer « Dites-nous quelque chose » par un réflexe immédiat sur le spectateur.</div>
+              </div>
+            </label>
+            <div class="check-example"><strong>Journal n° 1 :</strong> J'ai fini sur un compteur à zéro, sans aucune question. Zéro commentaire. Raté.</div>
+          </div>
+
+          <div class="check-item">
+            <label class="check-label">
+              <input type="checkbox" class="check-input" />
+              <div>
+                <div class="check-title">6. Pont vers un Short vertical relié en « Vidéo associée »</div>
+                <div class="check-sub">Un moment fort de 25 à 40 secondes, qui renvoie vers le journal de bord.</div>
+              </div>
+            </label>
+            <div class="check-example"><strong>Journal n° 1 :</strong> « Bonjour la Terre » renvoie bien vers le journal n° 1. Au moins un point.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="step-footer">
+        <button type="button" class="btn-step" data-go="note-lea">← Retour : Note de Léa</button>
+        <button type="button" class="btn-step is-primary" data-go="essentiel">Revenir à l'essentiel ↺</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

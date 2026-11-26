@@ -512,6 +512,7 @@ function ficheMembre(el, m) {
       <div class="fiche-gauche">
         <img src="portraits/${m.id}.svg" alt="${esc(m.nom)}" ${stase ? 'style="filter:grayscale(1) brightness(.45) blur(2px)"' : ""}>
         ${!stase ? `<div id="journal-livre"></div>` : ""}
+        ${!stase && m.id === "lea" ? `<div id="site-lea"></div>` : ""}
       </div>
       <div>
         <p class="panneau-sur" style="color:${stase ? "var(--rouge-pale)" : "var(--cyan)"} !important">${stase ? "EN STASE" : "ÉVEILLÉ"}${m.numero ? ` · IA n° ${m.numero}` : ""}</p>
@@ -524,6 +525,7 @@ function ficheMembre(el, m) {
     </div>`;
   el.dataset.journal = stase ? "" : m.id;
   if (!stase) Journaux.rendre(el, m.id);
+  if (!stase && m.id === "lea" && window.Inventaire) Inventaire.rendreFiche(el.querySelector("#site-lea"), "site_lea");
 }
 
 function ongletJournal(el) {

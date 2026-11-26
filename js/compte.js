@@ -79,6 +79,8 @@ const Compte = {
     const onglet = document.querySelector('#onglets [aria-selected="true"]');
     if (corps && onglet && onglet.dataset.onglet === "acces" && !document.getElementById("terminal").hidden) this.rendre(corps);
     if (corps && corps.dataset.journal && document.getElementById("journal-livre")) Journaux.rendre(corps, corps.dataset.journal);
+    const site = document.getElementById("site-lea");
+    if (site && window.Inventaire) Inventaire.rendreFiche(site, "site_lea");
   },
 
   /* ---------- Affichage ---------- */
@@ -179,6 +181,7 @@ const Compte = {
       ${Journaux.actifs() ? `<div id="journaux-acces"></div>` : `<div class="bloc"><h4>Bonus</h4>
         <div class="bonus"><span class="cadenas">🔒</span><span><b>Archives du bord</b><br>Bientôt disponibles avec votre énergie perso.</span></div>
       </div>`}
+      <div class="bloc"><h4>Inventaire</h4><div id="inventaire-acces"></div></div>
       <div class="bloc"><h4>Applis du bord</h4>
         <p class="aide" style="margin:0">Aucune appli pour l'instant. Votre progression y sera enregistrée sur cet accès dès leur création.</p>
       </div>
@@ -190,6 +193,7 @@ const Compte = {
         dans toutes les applis reliées à cet accès seront effacées. Impossible de revenir en arrière.
         <div class="actions"><button class="btn alerte" id="b-confirmer">Oui, supprimer définitivement</button><button class="btn" id="b-annuler">Annuler</button></div></div>` : ""}`;
     Journaux.acces(el.querySelector("#journaux-acces"));
+    if (window.Inventaire) Inventaire.rendre(el.querySelector("#inventaire-acces"));
     if (v) this.suivreDecompte();
     el.querySelector("#b-sortir").onclick = () => this.sortir();
     el.querySelector("#b-supprimer").onclick = () => { this.confirmerSuppression = true; this.rendre(el); };

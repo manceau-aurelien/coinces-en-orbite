@@ -1,7 +1,7 @@
 {
-  "maj": "2026-11-25-1",
+  "maj": "2026-11-26-1",
   "date_bord": "Novembre 2026",
-  "energie": 2.5,
+  "energie": 1,
   "journaux": true,
   "carburant": {
     "releve_le": null,
@@ -119,6 +119,7 @@
         "C'est elle qui crée les applications du bord, et elle tient à ce que tout le monde comprenne comment elles marchent.",
         "Au terminal, elle a renommé la chaîne du vaisseau « Coincés en orbite » et publié le premier journal de bord.",
         "Dans la nuit du 23 au 24 novembre, elle a ouvert une partie du terminal au réseau de la Terre. C'est par là que vous êtes entrés.",
+        "Le 25 novembre, elle a passé douze heures sur les ondes terriennes et rangé ses recherches dans un site, sous son journal.",
         "Pour elle, se remettre en veille serait une petite mort."
       ]
     },
@@ -219,6 +220,16 @@
       "lien": "https://youtube.com/shorts/lppyWnxBIDA",
       "image": "img/miniature-short-roue-libre.jpg",
       "vertical": true
+    },
+    {
+      "type": "episode",
+      "numero": 3,
+      "date": "2026-11-26",
+      "titre": "Une IA découvre YouTube pendant 12 heures",
+      "resume": "Douze heures sur les ondes terriennes, le Short de Byte qui remonte la jauge, un site de recherches, et l'énergie qu'il fallait pour ouvrir le sas 03.",
+      "duree": "9:28",
+      "lien": "https://youtu.be/2NNI6u29WOE",
+      "image": "img/miniature-ep03.jpg"
     }
   ],
   "projets": []
